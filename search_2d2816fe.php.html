@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    
+    <title>Jump Slide</title>
+    <link rel="stylesheet" href="./css/styles.css" type="text/css" />
+    <link rel="stylesheet" href="./css/eco.css" type="text/css" />
+    <!--[if IE 9]> <link rel="stylesheet" href="css/styles_ie9.css" type="text/css" /> <![endif]-->
+    <!--[if IE 8]> <link rel="stylesheet" href="css/styles_ie8.css" type="text/css" /> <![endif]-->
+    <!--[if IE 7]> <link rel="stylesheet" href="css/styles_ie7.css" type="text/css" /> <![endif]-->
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="./css/jquery.lightbox-0.5.css" type="text/css" />
+    <link rel="stylesheet" href="./php/widget-rating_f5998e68.php.css" type="text/css" />
+    <!-- star rating css -->
+    <script type="text/javascript" src="./js/jquery-1.4.3.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.lightbox-0.5.pack.js"></script>
+    <script type="text/javascript" src="./js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="./js/dtbaker_slider_links.js"></script>
+    <script type="text/javascript" src="./js/dtbaker_slider.js"></script>
+    <script type="text/javascript" src="./js/dtbaker_animation.js"></script>
+    <script type="text/javascript" src="./js/simplecart/dtbaker_simplecart.js"></script>
+    <script type="text/javascript">
+	<!-- js friendly fallback for animations -->
+	document.write(unescape('%3Cstyle type="text/css"%3E.spacer_animation .spacer_animation_parts div{ margin-top:400px; }%3C/style%3E'));
+	document.write(unescape('%3Cstyle type="text/css"%3E.main_box_background .main_box_bg_left{ margin-left:0px; }%3C/style%3E'));
+	document.write(unescape('%3Cstyle type="text/css"%3E.main_box_background .main_box_bg_right{ margin-left:475px;margin-top:-438px; }%3C/style%3E'));
+    $(function() {
+		
+		// under popup animation code:
+		$('.spacer_animation').each(function(){
+			var foo = new anim_scroller();
+			foo.init_popup(this);
+			anim_scrollers.push(foo);
+		});
+		// popout leaf code.
+		$('.main_box_background').each(function(){
+			var foo = new anim_scroller();
+			foo.init_popout(this,[
+				{class:'.main_box_bg_left',image:'./images/eco/leaves_left.png',animation_from:{marginLeft:0},animation_to:{marginLeft: -121},time:600},
+				{class:'.main_box_bg_right',image:'./images/eco/leaves_right.png',animation_from:{marginLeft:475, marginTop:-438},animation_to:{marginLeft: 595,marginTop: -331},time:600}
+				]
+			);
+			anim_scrollers.push(foo);
+		});
+		window.onscroll=dtbaker_anim_scroll_go;
+		dtbaker_anim_scroll_go();
+		
+        $('.lightbox').lightBox();
+        $('.dtbaker_gallery a').lightBox();
+        // this starts the "portfolio" sideways scroller.
+        // create a new one of these for each sideways scroller you would like to have.
+        new dtbaker_scroller('portfolio_slider');
+		new dtbaker_simpleCart({
+			'id': 'buy_now', // unique id for this product. don't change this.
+			'paypal': 'dtbaker@gmail.com', // change to false to disable paypal
+			'google': '251134918603076', // change to false to disable google
+			'email': true, // allow the email method
+			'flat_rate': false, // change to false to charge shipping per item
+			'shipping_rate': 0, // shipping rate is controlled by the drop down on order form.
+			'product_name': 'Your product name here',
+			'product_price': 350.00,
+			'currency': USD,
+			'thank_you_url': './thank_you.html'
+		});
+	});
+    </script>
+    <meta charset="UTF-8"></head>
+    <body>
+<div id="fixed_header">
+      <div id="header">
+    <div id="logo"><a href="#home_page" class="slide_link">Single Jump - Simple single product for sale template</a></div>
+    <div id="menu">
+          <ul id="navigation">
+        <li><a href="./index.html#home_page" class="slide_link">Home</a></li>
+        <li><a href="./index.html#buy_now" class="slide_link">Buy Now</a></li>
+        
+        <li><a href="./index.html#features" class="slide_link">Features</a> 
+              <!--notice you do not close the </li> here -->
+             <ul class="second-level">
+            <!--start a new list with the style: class="second-level"-->
+            <li><a href="./index.html#screenshot" class="slide_link">Gallery</a></li>
+          </ul>
+        </li>
+        
+        <li><a href="./index.html#reviews" class="slide_link">Reviews</a> </li>
+        <li><a href="./index.html#support" class="slide_link">Support</a></li>
+        <li><a href="./index.html#contact" class="slide_link">Contact</a></li>
+      </ul>
+        </div>
+  </div>
+    </div>
+<!--end header-->
+<div id="home_page"></div>
+<div id="bg_top">
+      <div id="wrapper">
+<div class="main_box_wrapper" style="padding-top:0;">
+        <!-- start box background -->
+        <div class="main_box_background"> 
+            <div class="main_box_bg_left"></div>
+            <!--home box-->
+            <div class="main_box" id="section1"> 
+                <!-- sets the width, minimum height and top margin -->
+                <div class="content">
+<div class="phpsearch_wrapper">
+    <form action="?" method="get">
+    <input type="text" name="search" class="phpsearch_input" size="35" value="" />
+    <input type="submit" name="go" value="Search" class="phpsearch_button" />
+  </form>
+  </div>
+
+                    <div class="clear"></div>
+                    <!-- forces the design to grow down as you add more content --> 
+                </div>
+                <!-- closes content --> 
+            </div>
+            <!-- closes main box -->
+            <div class="main_box_bg_right"></div>
+        </div>
+	</div>
+	<!-- end main box background --> 
+	
+	    
+  </div>
+      <!--end wrapper--> 
+    </div>
+<!--bg top--> 
+<!-- star rating javascript --> 
+<script language="javascript" src="./php/widget-rating_cdf7b7c6.php.js" type="text/javascript"></script>
+</body>
+</html>

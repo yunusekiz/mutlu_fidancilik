@@ -1,0 +1,1084 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    
+    <title>Mutlu Fidancılık </title>
+    <link rel="stylesheet" href="./css/styles.css" type="text/css" />
+    <link rel="stylesheet" href="./css/eco.css" type="text/css" />
+    <!--[if IE 9]> <link rel="stylesheet" href="css/styles_ie9.css" type="text/css" /> <![endif]-->
+    <!--[if IE 8]> <link rel="stylesheet" href="css/styles_ie8.css" type="text/css" /> <![endif]-->
+    <!--[if IE 7]> <link rel="stylesheet" href="css/styles_ie7.css" type="text/css" /> <![endif]-->
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="./css/jquery.lightbox-0.5.css" type="text/css" />
+    <link rel="stylesheet" href="./php/widget-rating_f5998e68.php.css" type="text/css" />
+    <!-- star rating css -->
+    <script type="text/javascript" src="./js/jquery-1.4.3.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.lightbox-0.5.pack.js"></script>
+    <script type="text/javascript" src="./js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="./js/dtbaker_slider_links.js"></script>
+    <script type="text/javascript" src="./js/dtbaker_slider.js"></script>
+    <script type="text/javascript" src="./js/dtbaker_animation.js"></script>
+    <script type="text/javascript" src="./js/simplecart/dtbaker_simplecart.js"></script>
+    <script type="text/javascript">
+	<!-- js friendly fallback for animations -->
+	document.write(unescape('%3Cstyle type="text/css"%3E.spacer_animation .spacer_animation_parts div{ margin-top:400px; }%3C/style%3E'));
+	document.write(unescape('%3Cstyle type="text/css"%3E.main_box_background .main_box_bg_left{ margin-left:0px; }%3C/style%3E'));
+	document.write(unescape('%3Cstyle type="text/css"%3E.main_box_background .main_box_bg_right{ margin-left:475px;margin-top:-438px; }%3C/style%3E'));
+    $(function() {
+		$('.spacer_animation').each(function(){
+			var foo = new anim_scroller();
+			foo.init_popup(this);
+			anim_scrollers.push(foo);
+		});
+		// popout leaf code.
+		$('.main_box_background').each(function(){
+			var foo = new anim_scroller();
+			foo.init_popout(this,[
+				{class:'.main_box_bg_left',image:'./images/eco/leaves_left.png',animation_from:{marginLeft:0},animation_to:{marginLeft: -121},time:600},
+				{class:'.main_box_bg_right',image:'./images/eco/leaves_right.png',animation_from:{marginLeft:475, marginTop:-438},animation_to:{marginLeft: 595,marginTop: -331},time:600}
+				]
+			);
+			anim_scrollers.push(foo);
+		});
+		window.onscroll=dtbaker_anim_scroll_go;
+		dtbaker_anim_scroll_go();
+		
+        $('.lightbox').lightBox();
+        $('.dtbaker_gallery a').lightBox();
+        // this starts the "portfolio" sideways scroller.
+        // create a new one of these for each sideways scroller you would like to have.
+        new dtbaker_scroller('portfolio_slider');
+		new dtbaker_simpleCart({
+			'id': 'buy_now', // unique id for this product. don't change this.
+			'paypal': 'dtbaker@gmail.com', // change to false to disable paypal
+			'google': '251134918603076', // change to false to disable google
+			'email': true, // allow the email method
+			'flat_rate': false, // change to false to charge shipping per item
+			'shipping_rate': 0, // shipping rate is controlled by the drop down on order form.
+			'product_name': 'Your product name here',
+			'product_price': 350.00,
+			'currency': USD,
+			'thank_you_url': './thank_you.html'
+		});
+	});
+    </script>
+    <meta charset="UTF-8"></head>
+    <body>
+      <div id="main-content" class="editable">
+<div id="fixed_header">
+      <div id="header">
+    <div id="logo"><a href="#home_page" class="slide_link">Single Jump - Simple single product for sale template</a></div>
+    <div id="menu">
+          <ul id="navigation">
+        <li><a href="#home_page" class="slide_link">Anasayfa</a></li>
+        <li><a href="#reviews" class="slide_link">Hakkımızda</a></li>
+        
+        <li><a href="#features" class="slide_link">Ürünler</a>
+            <ul class="second-level">
+            <!--start a new list with the style: class="second-level"-->
+            <li><a href="./index.html#features" class="slide_link">Fidanlar</a></li>
+            <li><a href="./index.html#screenshot" class="slide_link">Çöğürler</a></li>
+          </ul>
+        </li>
+          
+        <li><a href="#screenshot" class="slide_link">Resim Galerisi</a> </li>    
+        <li><a href="#contact" class="slide_link">İletişim</a></li>
+      </ul>
+        </div>
+  </div>
+    </div>
+<!--end header-->
+<div id="home_page"></div>
+<div id="bg_top">
+      <div id="wrapper">
+    <div class="main_box_wrapper" id="home_pag" style="padding-top:0;">
+          <div class="main_box_background"> <!-- start box background -->
+        <div class="main_box_bg_left"></div>
+        
+        <!--home box-->
+        <div class="main_box" id="section1"> 
+              <!-- <div class="home_price_tag"> WAS <del>$400</del>
+        <div class="band"> NOW <span class="size48">$350</span></div>
+      </div>-->
+              <div class="home_box">
+            <div class="text">
+                  <h1>Örnek Fidan Sitesi</h1>
+                  <h2>Burası örnek fidan sitesi anasayfasıdır..</h2>
+                  <ul class="numbered_list">
+                <li><span>1</span>Örnek fidan sitesi anasayfası</li>
+                <li><span>2</span>Örnek fidan sitesi anasayfası</li>
+                <li><span>3</span>Örnek fidan sitesi anasayfası</li>
+              </ul>
+                  <ul class="buttons_float">
+                <li>
+                      <div class="button_med"><a href="" class="slide_link">detaylar</a></div>
+                    </li>
+                <li>
+                      <div class="button_med"><a href="" class="slide_link">detaylar</a></div>
+                    </li>
+              </ul>
+                </div>
+            <!--end left-->
+            <div class="home_right">
+                  <div class="star">fidan</div>
+                  <img src="./images/eco/buy_book.png" width="400" height="430" alt="product" /></div>
+            <!--end home right--> 
+          </div>
+            </div>
+        <!--end home box-->
+        <div class="main_box_bg_right"></div>
+      </div>
+          <!-- end main box background --> 
+        </div>
+    
+    <!--start under animation-->
+    <div class="spacer_animation" id="spacer_animation_rocks">
+          <div class="spacer_animation_bg"></div>
+          <div class="spacer_animation_parts">
+        <div class="spacer_animation_part1"></div>
+        <div class="spacer_animation_part2"></div>
+        <div class="spacer_animation_part3"></div>
+      </div>
+        </div>
+    <!--end under animation--> 
+    
+    <!--buy now box-->
+    <div class="main_box_wrapper" id="buy_now">
+          <div class="main_box_background"> <!-- start box background -->
+        <div class="main_box_bg_left"></div>
+        <div class="main_box">
+              <div class="content">
+            <div class="left_460">
+                  <h1>Buy Now</h1>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sagittis nisi varius lorem posuere tristique condimentum eros ornare. Nunc fermentum, urna condimentum imperdiet congue, magna odio cursus mauris, a hendrerit lacus arcu id dolor. In hac habitasse platea dictumst. Nunc massa metus, rhoncus et luctus sit amet, vehicula in lorem. Cras facilisis, ipsum non dictum egestas, dolor lorem fermentum lorem, sed aliquam arcu sem vitae nisl. Etiam est mauris, lobortis sit amet accumsan ut, auctor vitae ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. </p>
+                  <ul class="ticklist">
+                <li>Vestibulum ante ipsum primis</li>
+                <li>In faucibus orci luctus et ultrices posuere cubilia</li>
+                <li>Ida dapibus. Duis volutpat lectus</li>
+              </ul>
+                  <div class="sale_border">
+                <div class="sale">
+                      <div class="left">
+                    <p class="title18">Buy the product online &amp; save! </p>
+                    <p class="title30"> Online sale price: </p>
+                    <p class="title14">*Price includes tax and free shipping </p>
+                  </div>
+                      <div class="balls"><span class="price1">$350</span> <span class="price2">SAVE<br />
+                        <span class="size24">$50</span></span></div>
+                      <div class="clear"></div>
+                    </div>
+              </div>
+                </div>
+            <!--end left-->
+            
+            <div class="right_400"><img src="./images/eco/buy_book.png" width="400" height="430" alt="book" /></div>
+            <div class="clear"></div>
+            <div class="two_column_wrapper">
+                  <div class="side_left"> 
+                
+                <!--side box-->
+                <div class="side_box">
+                      <div class="top"></div>
+                      <div class="content_middle">
+                    <p class="title">Testimonial</p>
+                    <span class="testimonial_left"></span>Lorem ipsum dolor sit amet,    
+                    consectetur adipiscing elit. Phasellus sagittis nisi varius lorem posuere tristique condimentum eros ornare. Nunc fermentum, urna condimentum imperdiet. <span class="testimonial_right"></span> <em><strong>Name Name</strong></em><strong></strong>
+                    <div class="clear"></div>
+                  </div>
+                      <div class="bottom"></div>
+                    </div>
+                <!--end side box--> 
+                <!--side box-->
+                <div class="side_box">
+                      <div class="top"></div>
+                      <div class="content_middle">
+                    <p class="title"><img src="./images/money_back.png" alt="Money Back" width="101" height="75" align="left" /></p>
+                    <p class="title">30-DAY MONEY<br />
+                          BACK GUARANTEE</p>
+                    <div class="clear"></div>
+                  </div>
+                      <div class="bottom"></div>
+                    </div>
+                <!--end side box--> 
+                <!--side box-->
+                <div class="side_box">
+                      <div class="top"></div>
+                      <div class="content_middle">
+                    <p class="title">Pay Securely through:</p>
+                    <ul class="payment">
+                          <li><img src="./images/icon_mastercard.png" width="47" height="29" alt="mc" /></li>
+                          <li><img src="./images/icon_visa.png" width="47" height="29" alt="visa" /></li>
+                          <li><img src="./images/icon_paypal.png" width="47" height="29" alt="paypal" /></li>
+                          <li><img src="./images/icon_bank.png" width="47" height="29" alt="bank" /></li>
+                        </ul>
+                    <div class="clear"></div>
+                  </div>
+                      <div class="bottom"></div>
+                    </div>
+                <!--end side box--> 
+              </div>
+                  <div class="content_right">
+                <div class="box_title"> ORDER YOURS HERE </div>
+                <p>Enter your details below to place an order.</p>
+                <form action="php/simplecart_email.php" method="post" class="shop_form">
+                      <fieldset class="form_wrap">
+                    <label for="qty">Quantity:
+                          <input name="qty" type="text" class="forms quantity" id="qty" size="4" value="1" style="text-align:center;" />
+                        </label>
+                    <label for="shipping">Shipping:
+                          <select name="shipping" id="shipping" class="forms shipping_cost">
+                        <option value="9.90">Express $9.90</option>
+                        <option value="5.20">Regular $5.20</option>
+                      </select>
+                        </label>
+                    <label for="first_name">Your Name:
+                          <input name="first_name" type="text" class="forms" id="first_name" size="35" />
+                        </label>
+                    <label for="email">Email:
+                          <input name="email" type="text" class="forms" id="email" size="35" />
+                        </label>
+                    <label for="phone">Phone:
+                          <input name="phone" type="text" class="forms" id="phone" size="35" />
+                        </label>
+                    <label for="street_address">Street Address:
+                          <input name="address1" type="text" class="forms" id="street_address" size="35" />
+                        </label>
+                    <label for="city">City:
+                          <input name="city" type="text" class="forms" id="city" size="35" />
+                        </label>
+                    <label for="state">State:
+                          <input name="state" type="text" class="forms" id="state" size="35" />
+                        </label>
+                    <label for="zip">Zip:
+                          <input name="zip" type="text" class="forms" id="zip" size="10" />
+                        </label>
+                    <label for="country">Country:
+                          <input name="country" type="text" class="forms" id="country" size="10" />
+                        </label>
+                    <label for="message">Message:
+                          <textarea name="message" cols="30" rows="4" class="textarea" id="message"></textarea>
+                        </label>
+                    <div class="cart_summary_outer_wrap">
+                          <div class="cart_summary_wrap">
+                        <label> Total: <span class="cart_summary" style="position: absolute; margin: 0 0 0 15px;">$0</span> </label>
+                      </div>
+                        </div>
+                    <label for="payment_paypal">PayPal: <span style="position: absolute; font-size: 12px; font-weight: normal; margin: 0 0 0 39px;">Pay Securely with your Credit Card, PayPal Balance or Bank Transfer.</span>
+                          <input type="radio" name="payment_method" id="payment_paypal" class="form_radio" value="paypal" checked="checked" />
+                        </label>
+                    <label for="payment_google">Google: <span style="position: absolute; font-size: 12px; font-weight: normal; margin: 0 0 0 39px;">Pay Securely using the online Google Checkout system.</span>
+                          <input type="radio" name="payment_method" id="payment_google" class="form_radio" value="google"/>
+                        </label>
+                    <label for="payment_email">Email: <span style="position: absolute; font-size: 12px; font-weight: normal; margin: 0 0 0 39px;">Email us your order and we will ring you for payment.</span>
+                          <input type="radio" name="payment_method" id="payment_email" class="form_radio" value="email"/>
+                        </label>
+                    <br class="clear"/>
+                    <input name="submit_message" type="button"  class="submit_button submit_order" value="Order" />
+                  </fieldset>
+                    </form>
+              </div>
+                  <div class="clear"></div>
+                </div>
+            <!--end two_column_wrapper--> 
+          </div>
+            </div>
+        <div class="main_box_bg_right"></div>
+        <!-- end main box background --> </div>
+        </div>
+    <!--end buy now box--> 
+    
+    <!--start under animation-->
+    <div class="spacer_animation" id="spacer_animation_wind">
+          <div class="spacer_animation_bg"></div>
+          <div class="spacer_animation_parts">
+        <div class="spacer_animation_part1"></div>
+        <div class="spacer_animation_part2"></div>
+        <div class="spacer_animation_part3"></div>
+        <div class="spacer_animation_part4"></div>
+      </div>
+        </div>
+    <!--end under animation--> 
+    
+    <!--portfolio box-->
+    <div class="main_box_wrapper" id="features">
+          <div class="main_box_background"> <!-- start box background -->
+        <div class="main_box_bg_left"></div>
+        <div class="main_box">
+              <div class="content">
+            <div id="portfolio_slider" class="slider_container">
+                  <div class="slider_header">
+                <h1>Fidanlar</h1>
+                <ul class="slider_buttons">
+                      <li><a href="#" class="portfolio_prev slider_prev">&laquo; önceki</a></li>
+                      <li><a href="#" class="portfolio_next slider_next">sonraki &raquo;</a></li>
+                    </ul>
+              </div>
+                  <div class="slider_wrapper">
+                <div class="slider_mover"> 
+                      <!-- start 1-->
+                      <div>
+                    <ul class="threecols">
+                          <li class="margin_right_30">
+                        <div class="feature">
+                          <div class="image"> <a href="./images/eco/akca-armut1.jpg" class="lightbox"><img src="./images/eco/akca-armut1.jpg" alt="photo" width="286" height="190" border="0" /></a>
+                          </div>
+                          <div class="text">
+                            <h3 style="font-weight:bold">Armut</h3>
+                            <ul class="dots">
+
+                                  <a href="#armut" class="slide_link"><li>Deveci</li></a>
+                                  <a href="#armut" class="slide_link"><li>Santa Maria </li></a>
+                                  <a href="#Williams" class="slide_link"><li>Williams Bartlet</li></a>
+                                  <a href="#Williams" class="slide_link"><li>Akça</li></a>
+                                  <a href="#Etruska" class="slide_link"><li>Etruska</li></a>
+                                </ul>
+                            <!-- <p><a href="#" target="_blank" class="link_button">Detaylar</a></p>-->
+                          </div>
+                        </div>
+                      </li>
+                          <li class="margin_right_30">
+                        <div class="feature">
+                              <div class="image"> <a href="./images/eco/esme-ayvasi _b.jpg" class="lightbox"><img src="./images/eco/esme-ayvasi.jpg" alt="photo" width="286" height="190" border="0" /></a></div>
+                              <div class="text">
+                            <h3 style="font-weight:bold">Ayva</h3>
+                            <ul class="dots">
+                                  <a href=""><li>Eşme</li></a>
+                                  <a href=""><li>Limon Ayvası</li></a>
+                                  <a href=""><li>Ekmek Ayvası</li></a>
+                                </ul>
+                            <!--<p><a href="#" target="_blank" class="link_button">detaylar</a></p>-->
+                          </div>
+                            </div>
+                      </li>
+                          <li>
+                        <div class="feature">
+                              <div class="image"> <a href="./images/eco/ASILI-KAMAN-1-_b.jpg" class="lightbox"><img src="./images/eco/ASILI-KAMAN-1-.jpg" alt="Photo" width="286" height="190" border="0" /></a></div>
+                              <div class="text">
+                            <h3 style="font-weight:bold">Ceviz</h3>
+                            <ul class="dots">
+                                  <a href=""><li>Bilecik</li></a>
+                                  <a href=""><li>Chandler</li></a>
+                                  <a href=""><li>Franquette</li></a>
+                                  <a href=""><li>Kamar 1</li></a>
+                                  <a href=""><li>Kaman 4</li></a>
+                                  <a href=""><li>Pedro</li></a>
+                                  <a href=""><li>Şebin</li></a>                                  
+                                </ul>
+                           <!-- <p><a href="#" target="_blank" class="link_button">more</a></p>-->
+                          </div>
+                            </div>
+                      </li>
+                        </ul>
+                  </div>
+                      <!-- end 1--> 
+
+                      <!-- start 2 -->
+                      <div>
+                    <ul class="threecols">
+                          <li class="margin_right_30">
+                        <div class="feature">
+                              <div class="image"> <a href="./images/eco/Granny_Smith_-elma1_b.jpg" class="lightbox"><img src="./images/eco/Granny_Smith_-elma1.jpg" alt="photo" width="286" height="190" border="0" /></a></div>
+                              <div class="text">
+                            <h3 style="font-weight:bold">Elma</h3>
+                            <ul class="dots">
+                                  <a href=""><li>Summer Red</li></a>
+                                  <a href=""><li>Galaxy Gala</li></a>
+                                  <a href=""><li>Scarlet Spur</li></a>
+                                  <a href=""><li>Starkrimson Delicions</li></a>
+                                  <a href=""><li>Fuji</li></a>
+                                  <a href=""><li>Granny Simith</li></a>
+                                  <a href=""><li>Pink Lady</li></a>
+                                </ul>
+                            <!-- <p><a href="#" target="_blank" class="link_button">Detaylar</a></p>-->
+                          </div>
+                            </div>
+                      </li>
+                          <li class="margin_right_30">
+                        <div class="feature">
+                              <div class="image"> <a href="./images/eco/erik-papaz-_b.JPG" class="lightbox"><img src="./images/eco/erik-papaz-2.JPG" alt="photo" width="286" height="190" border="0" /></a></div>
+                              <div class="text">
+                            <h3 style="font-weight:bold">Erik</h3>
+                            <ul class="dots">
+                                  <a href=""><li>Papaz</li></a>
+                                  <a href=""><li>Red Beauty</li></a>
+                                  <a href=""><li>Black Beauty</li></a>
+                                  <a href=""><li>Black Amber</li></a>
+                                  <a href=""><li>Black Diamond</li></a>
+                                  <a href=""><li>Pesident</li></a>
+                                </ul>
+                            <!--<p><a href="#" target="_blank" class="link_button">detaylar</a></p>-->
+                          </div>
+                            </div>
+                      </li>
+                          <li>
+                        <div class="feature">
+                              <div class="image"> <a href="./images/eco/kayisi-roksana_b.JPG" class="lightbox"><img src="./images/eco/kayisi-roksana.JPG" alt="Photo" width="286" height="190" border="0" /></a></div>
+                              <div class="text">
+                            <h3 style="font-weight:bold">Kayısı</h3>
+                            <ul class="dots">
+                                  <a href=""><li>Roxana</li></a>
+                                  <a href=""><li>Şekerpare</li></a>                                 
+                            </ul>
+                           <!-- <p><a href="#" target="_blank" class="link_button">more</a></p>-->
+                          </div>
+                            </div>
+                      </li>
+                        </ul>
+                  </div>
+                      <!-- end 2-->
+                      
+                      <!-- start 3 -->
+                      <div>
+                    <ul class="threecols">
+                          <li class="margin_right_30">
+                        <div class="feature">
+                              <div class="image"> <a href="./images/eco/kiraz-stella_b.JPG" class="lightbox"><img src="./images/eco/kiraz-stella.JPG" alt="photo" width="286" height="190" border="0" /></a></div>
+                              <div class="text">
+                            <h3 style="font-weight:bold">Kiraz</h3>
+                            <ul class="dots">
+                                  <a href=""><li>Early Burlat</li></a>
+                                  <a href=""><li>Star Giant</li></a>
+                                  <a href=""><li>Van</li></a>
+                                  <a href=""><li>Stella</li></a>
+                                  <a href=""><li>Lambert</li></a>
+                                  <a href=""><li>0900 Ziraat</li></a>
+                                </ul>
+                            <!-- <p><a href="#" target="_blank" class="link_button">Detaylar</a></p>-->
+                          </div>
+                            </div>
+                      </li>
+                          <li class="margin_right_30">
+                        <div class="feature">
+                              <div class="image"> <a href="./images/eco/musmula_b.JPG" class="lightbox"><img src="./images/eco/musmula_1.JPG" alt="photo" width="286" height="190" border="0" /></a></div>
+                              <div class="text">
+                            <h3 style="font-weight:bold">Muşmula</h3>
+                            <ul class="dots">
+                                  <a href=""><li>Muşmula</li></a>
+                            </ul>
+                            <!--<p><a href="#" target="_blank" class="link_button">detaylar</a></p>-->
+                          </div>
+                            </div>
+                      </li>
+                          <li>
+                        <div class="feature">
+                              <div class="image"> <a href="./images/eco/venüs-nektarin_b.jpg" class="lightbox"><img src="./images/eco/venüs-nektarin.jpg" alt="Photo" width="286" height="190" border="0" /></a></div>
+                              <div class="text">
+                            <h3 style="font-weight:bold">Nektarin</h3>
+                            <ul class="dots">
+                                  <a href=""><li>Big Top</li></a>
+                                  <a href=""><li>Sweet Lady</li></a>
+                                  <a href=""><li>Venüs</li></a>
+                                  <a href=""><li>Caldesi 2000</li></a>                                
+                            </ul>
+                           <!-- <p><a href="#" target="_blank" class="link_button">more</a></p>-->
+                          </div>
+                            </div>
+                      </li>
+                        </ul>
+                  </div>
+                  <!-- end 3-->
+
+                  <!-- start 4 -->
+                      <div>
+                    <ul class="threecols">
+                          <li class="margin_right_30">
+                        <div class="feature">
+                              <div class="image"> <a href="./images/eco/royal-summer-şeftali_b.jpg" class="lightbox"><img src="./images/eco/royal-summer-şeftali.jpg" alt="photo" width="286" height="190" border="0" /></a></div>
+                              <div class="text">
+                            <h3 style="font-weight:bold">Şeftali</h3>
+                            <ul class="dots">
+                                  <a href=""><li> Elegant Lady </li></a>
+                                  <a href=""><li> Royal Summer </li></a>
+                                  <a href=""><li> Red Elegant </li></a>
+                                  <a href=""><li> Royal Glory </li></a>
+                                  <a href=""><li> Royal Gem </li></a>
+                                  <a href=""><li> Spring Crest </li></a>                                  
+                                </ul>
+                            <!-- <p><a href="#" target="_blank" class="link_button">Detaylar</a></p>-->
+                          </div>
+                            </div>
+                      </li>
+                          <li class="margin_right_30">
+                        <div class="feature">
+                              <div class="image"> <a href="./images/eco/trabzon-hurması1-_b.jpg" class="lightbox"><img src="./images/eco/trabzon-hurması1-.jpg" alt="photo" width="286" height="190" border="0" /></a></div>
+                              <div class="text">
+                            <h3 style="font-weight:bold">Trabzon Hurması</h3>
+                            <ul class="dots">
+                                  <a href=""><li>Trabzon Hurması</li></a>
+                            </ul>
+                            <!--<p><a href="#" target="_blank" class="link_button">detaylar</a></p>-->
+                          </div>
+                            </div>
+                      </li>
+                          <li>
+                        <div class="feature">
+                              <div class="image"> <a href="./images/eco/visne_b.jpg" class="lightbox"><img src="./images/eco/visne.jpg" alt="Photo" width="286" height="190" border="0" /></a></div>
+                              <div class="text">
+                            <h3 style="font-weight:bold">Vişne</h3>
+                            <ul class="dots">
+                                  <a href=""><li>Kütahya</li></a>     
+                            </ul>
+                           <!-- <p><a href="#" target="_blank" class="link_button">more</a></p>-->
+                          </div>
+                            </div>
+                      </li>
+                        </ul>
+                  </div>               
+                  <!-- end 4-->                   
+
+                    </div>
+              </div>
+                </div>
+          </div>
+            </div>
+        <div class="main_box_bg_right"></div>
+      </div>
+          <!-- end main box background --> 
+          <!--start under animation-->
+          <div class="spacer_animation" id="spacer_animation_city">
+        <div class="spacer_animation_bg"></div>
+        <div class="spacer_animation_parts">
+              <div class="spacer_animation_part1"></div>
+              <div class="spacer_animation_part2"></div>
+              <div class="spacer_animation_part3"></div>
+            </div>
+      </div>
+          <!--end under animation--> 
+        </div>
+    <!--end features box--> 
+    
+    <!--gallery box-->
+    <div class="main_box_wrapper" id="screenshot">
+          <div class="main_box_background"> <!-- start box background -->
+        <div class="main_box_bg_left"></div>
+        <div class="main_box">
+              <div class="content">
+            <h1>Galeri</h1>
+            <div class="dtbaker_gallery">
+                  
+                <dl class="gallery-item">
+                <dt class="gallery-icon"> <a href="./images/ceviz_fide_01.JPG" title="ceviz_fide"><img src="./images/ceviz_fide_01.JPG" class="attachment-thumbnail" alt="lg_1" title="ceviz_fide" width="157" height="157" /></a> </dt>
+              </dl>
+                  <dl class="gallery-item">
+                <dt class="gallery-icon"> <a href="./images/armut_fide_01.JPG" title="armut_fide"><img src="./images/armut_fide_01.JPG" class="attachment-thumbnail" alt="lg_1" title="armut_fide" width="157" height="157" /></a> </dt>
+              </dl>
+                  <dl class="gallery-item">
+                <dt class="gallery-icon"> <a href="./images/ayva_fide_01.JPG" title="ayva_fide"><img src="./images/ayva_fide_01.JPG" class="attachment-thumbnail" alt="lg_1" title="ayva_fide" width="157" height="157" /></a> </dt>
+              </dl>
+                  <dl class="gallery-item">
+                <dt class="gallery-icon"> <a href="./images/badem_fide_01.JPG" title="badem_fide"><img src="./images/badem_fide_01.JPG" class="attachment-thumbnail" alt="lg_1" title="badem_fide" width="157" height="157" /></a> </dt>
+              </dl>
+                  <dl class="gallery-item" style="margin-right:0px;">
+                <dt class="gallery-icon"> <a href="./images/dut_fide_01.JPG" title="dut_fide"><img src="./images/dut_fide_01.JPG" class="attachment-thumbnail" alt="lg_1" title="dut_fide" width="157" height="157" /></a> </dt>
+              </dl>
+                  <dl class="gallery-item">
+                <dt class="gallery-icon"> <a href="./images/elma_fide_01.JPG" title="elma_fide"><img src="./images/elma_fide_01.JPG" class="attachment-thumbnail" alt="lg_1" title="elma_fide" width="157" height="157" /></a> </dt>
+              </dl>
+                  <dl class="gallery-item">
+                <dt class="gallery-icon"> <a href="./images/kiraz_fide_01.JPG" title="kiraz_fide"><img src="./images/kiraz_fide_01.JPG" class="attachment-thumbnail" alt="lg_1" title="kiraz_fide" width="157" height="157" /></a> </dt>
+              </dl>
+                  <dl class="gallery-item">
+                <dt class="gallery-icon"> <a href="./images/fide_001.JPG" title="fide_001"><img src="./images/fide_001.JPG" class="attachment-thumbnail" alt="lg_1" title="fide_001" width="157" height="157" /></a> </dt>
+              </dl>
+                  <dl class="gallery-item">
+                <dt class="gallery-icon"> <a href="./images/erik_fide_01.JPG" title="erik_fide"><img src="./images/erik_fide_01.JPG" class="attachment-thumbnail" alt="lg_1" title="erik_fide" width="157" height="157" /></a> </dt>
+              </dl>
+                  <dl class="gallery-item" style="margin-right:0px;">
+                <dt class="gallery-icon"> <a href="./images/hurma_fide_01.JPG" title="hurma_fide"><img src="./images/hurma_fide_01.JPG" class="attachment-thumbnail" alt="lg_1" title="hurma_fide" width="157" height="157" /></a></dt>
+              </dl>
+              
+
+              <dl class="gallery-item">
+                <dt class="gallery-icon"> <a href="./images/kayısı_fide_01.JPG" title="kayısı_fide"><img src="./images/kayısı_fide_01.JPG" class="attachment-thumbnail" alt="lg_1" title="kayısı_fide" width="157" height="157" /></a> </dt>
+              </dl>
+                  <dl class="gallery-item">
+                <dt class="gallery-icon"> <a href="./images/fide_002.JPG" title="fide_002"><img src="./images/fide_002.JPG" class="attachment-thumbnail" alt="lg_1" title="fide_002" width="157" height="157" /></a> </dt>
+              </dl>
+
+
+
+              <dl class="gallery-item">
+                <dt class="gallery-icon"> <a href="./images/fide_003.JPG" title="fide_003"><img src="./images/fide_003.JPG" class="attachment-thumbnail" alt="lg_1" title="fide_003" width="157" height="157" /></a> </dt>
+              </dl>
+
+              <dl class="gallery-item">
+                <dt class="gallery-icon"> <a href="./images/fide_004.JPG" title="fide_004"><img src="./images/fide_004.JPG" class="attachment-thumbnail" alt="lg_1" title="fide_004" width="157" height="157" /></a> </dt>
+              </dl>
+              
+
+
+              <dl class="gallery-item" style="margin-right:0px;">
+                <dt class="gallery-icon"> <a href="./images/badem_fide_001.JPG" title="badem_fide"><img src="./images/badem_fide_001.JPG" class="attachment-thumbnail" alt="lg_1" title="badem_fide" width="157" height="157" /></a> </dt>
+              </dl>
+
+                <dl class="gallery-item">
+              <dt class="gallery-icon"> <a href="./images/fide_005.JPG" title="fide_005"><img src="./images/fide_005.JPG" class="attachment-thumbnail" alt="lg_1" title="fide_005" width="157" height="157" /></a> </dt>
+              </dl>    
+
+
+                <dl class="gallery-item">
+                <dt class="gallery-icon"> <a href="./images/fide_006.JPG" title="fide_006"><img src="./images/fide_006.JPG" class="attachment-thumbnail" alt="lg_1" title="fide_006" width="157" height="157" /></a> </dt>
+              </dl>   
+
+                  <dl class="gallery-item">
+                <dt class="gallery-icon"> <a href="./images/fide_007.JPG" title="fide_007"><img src="./images/fide_007.JPG" class="attachment-thumbnail" alt="lg_1" title="fide_007" width="157" height="157" /></a> </dt>
+              </dl>
+                  <dl class="gallery-item">
+                <dt class="gallery-icon"> <a href="./images/fide_008.JPG" title="fide_008"><img src="./images/fide_008.JPG" class="attachment-thumbnail" alt="lg_1" title="fide_008" width="157" height="157" /></a> </dt>
+              </dl>
+                  <dl class="gallery-item" style="margin-right:0px;">
+                <dt class="gallery-icon"> <a href="./images/fide_009.JPG" title="fide_009"><img src="./images/fide_009.JPG" class="attachment-thumbnail" alt="lg_1" title="fide_009" width="157" height="157" /></a> </dt>
+              </dl>
+                  <dl class="gallery-item">
+                <dt class="gallery-icon"> <a href="./images/fide_010.JPG" title="fide_010"><img src="./images/fide_010.JPG" class="attachment-thumbnail" alt="lg_1" title="fide_010" width="157" height="157" /></a> </dt>
+              </dl>
+                  <dl class="gallery-item">
+                <dt class="gallery-icon"> <a href="./images/fide_011.JPG" title="fide_011"><img src="./images/fide_011.JPG" class="attachment-thumbnail" alt="lg_1" title="fide_011" width="157" height="157" /></a> </dt>
+              </dl>
+
+                <dl class="gallery-item">
+                <dt class="gallery-icon"> <a href="./images/fide_012.JPG" title="fide_012"><img src="./images/fide_012.JPG" class="attachment-thumbnail" alt="lg_1" title="fide_012" width="157" height="157" /></a> </dt>
+              </dl> 
+              
+                <dl class="gallery-item">
+                <dt class="gallery-icon"> <a href="./images/hurma_03.JPG" title="hurma_03"><img src="./images/hurma_03.JPG" class="attachment-thumbnail" alt="lg_1" title="hurma_03" width="157" height="157" /></a> </dt>
+              </dl>                            
+
+
+                  <div class="clear"></div>
+                </div>
+          </div>
+            </div>
+        <div class="main_box_bg_right"></div>
+      </div>
+          <!-- end main box background --> 
+        </div>
+    
+    <!--start under animation-->
+    <div class="spacer_animation" id="spacer_animation_rainbow">
+          <div class="spacer_animation_bg"></div>
+          <div class="spacer_animation_parts">
+        <div class="spacer_animation_part1"></div>
+        <div class="spacer_animation_part2"></div>
+        <div class="spacer_animation_part3"></div>
+        <div class="spacer_animation_part4"></div>
+        <div class="spacer_animation_part5"></div>
+      </div>
+        </div>
+    <!--end under animation--> 
+    
+    <!--end screenshot box-->
+    <div class="spacer_graphic4"></div>
+    <!--Review box-->
+    <div class="main_box_wrapper" id="reviews">
+          <div class="main_box_background"> <!-- start box background -->
+        <div class="main_box_bg_left"></div>
+        <div class="main_box">
+              <div class="content">
+            <div class="content_left">
+                  <h1>Hakkımızda</h1>
+                  <p>Hakkımızda örnek metni, bu bir hakkımızda örnek metnidir,  bu bir hakkımızda örnek metnidir,  bu bir hakkımızda örnek metnidir,  bu bir hakkımızda örnek metnidir,  bu bir hakkımızda örnek metnidir,  bu bir hakkımızda örnek metnidir,  </p>
+              <div class="review_wrapper">
+                  <!--review one--> 
+                  <div class="review_title">Vizyonumuz</div>
+                <div class="review_date"><!--08 Temmuz 2012--></div>
+                <div class="reviewer_wrapper">
+ <div class="review_left"> <!--Reviewed by --><a href="#"><!--username--></a> </div>
+                  <!-- start star rating -->
+                  <div id="star_rating_1" class="widget-rating" style="float:left;"> <span class="widget-rating-data">r=1|r0=s,php/images/rating-star.gif,5</span> <span class="widget-rating-data">|</span> </div>
+                  <!-- end star rating -->
+                  </div>
+                  <div class="review_text"><p>Vizyonumuz örnek metni, bu bir vizyonumuz örnek metnidir, bu bir vizyonumuz örnek metnidir, bu bir vizyonumuz örnek metnidir, bu bir vizyonumuz örnek metnidir, bu bir vizyonumuz örnek metnidir, bu bir vizyonumuz örnek metnidir, bu bir vizyonumuz örnek metnidir,</p></div>
+                <a href="#" class="link_button"><!--Read the full review--></a>
+                  
+                  
+                  <!--end review one--><hr />
+                 <!--review one--> 
+                  <div class="review_title">Misyonumuz</div>
+                <div class="review_date"><!--28 March 2011--></div>
+                <div class="reviewer_wrapper">
+ <div class="review_left"><!-- Reviewed by --><a href="#"><!--username--></a> </div>
+                  <!-- start star rating -->
+                  <div id="star_rating_2" class="widget-rating" style="float:left;"> <span class="widget-rating-data">r=1|r0=s,php/images/rating-star.gif,5</span> <span class="widget-rating-data">|</span> </div>
+                  <!-- end star rating -->
+                </div>
+                <div class="review_text"><p>Misyonumuz örnek metni, bu bir misyonumuz örnek metnidir, bu bir misyonumuz örnek metnidir, bu bir misyonumuz örnek metnidir, bu bir misyonumuz örnek metnidir, bu bir misyonumuz örnek metnidir, bu bir misyonumuz örnek metnidir,</p></div>
+                <a href="#" class="link_button"><!--Read the full review--></a>
+                  
+                  
+              <!--end review one--><hr /></div>
+                 <!--<div class="button_med"><a href="#" class="slide_link">More &raquo;</a></div>-->
+                 
+                 </div>
+            <!--end content left-->
+            <div class="side_right"> 
+                  <!--side menu-->
+                  <div class="side_menu">
+                <h3>Past Reviews</h3>
+                <ul>
+                      <li><a href="#"> Vestibulum aliquet</a></li>
+                      <li><a href="#"> Enim sit amet bibendum</a></li>
+                      <li><a href="#"> Venenatis </a></li>
+                      <li><a href="#">Dolor risus ornare orci</a></li>
+                      <li><a href="#"> Ac mollis</a></li>
+                    </ul>
+              </div>
+                  <!--end side menu--> 
+                  
+                  <!--side box-->
+                  <div class="side_box_thin"> 
+                <!--search-->
+                <div class="search_box_container">
+                      <form action="search.php" method="get" name="search">
+                    <input name="search" type="text" class="field" id="search_box" />
+                    <input name="Search" type="submit" class="sbutton" value="search" />
+                  </form>
+                    </div>
+                <!--end search--> 
+              </div>
+                  <!--end side box thin--> 
+                  <!--side menu-->
+                  <div class="side_menu" style="margin-top:30px;">
+                <h3>Our Products</h3>
+                <ul>
+                      <li><a href="#"> Vestibulum aliquet</a></li>
+                      <li><a href="#"> Enim sit amet bibendum</a></li>
+                      <li><a href="#"> Venenatis </a></li>
+                      <li><a href="#">Dolor risus ornare orci</a></li>
+                      <li><a href="#"> Ac mollis</a></li>
+                    </ul>
+              </div>
+                  <!--end side menu--> 
+                </div>
+            <div class="clear"></div>
+          </div>
+            </div>
+        <div class="main_box_bg_right"></div>
+      </div>
+          <!-- end main box background --> 
+        </div>
+    <!--end review box--> 
+    
+    <!--start under animation-->
+    <div class="spacer_animation" id="spacer_animation_bird">
+          <div class="spacer_animation_bg"></div>
+          <div class="spacer_animation_parts">
+        <div class="spacer_animation_part1"></div>
+        <div class="spacer_animation_part2"></div>
+        <div class="spacer_animation_part3"></div>
+        <div class="spacer_animation_part4"></div>
+        <div class="spacer_animation_part5"></div>
+      </div>
+        </div>
+    <!--end under animation--> 
+    
+    <!--contact box-->
+    <div class="main_box_wrapper" id="support">
+          <div class="main_box_background"> <!-- start box background -->
+        <div class="main_box_bg_left"></div>
+        <div class="main_box">
+              <div class="content">
+            <div class="content_left">
+                  <h1>Armut</h1>
+                  
+                  <p class="title18" style="margin-bottom:5px;">Deveci</p>
+                Kökeni Anadolu olup, ağaçları orta kuvvete yarı yayvan gelişen bir çeşittir. Meyveleri, iri, iyi bakım  koşullarında çok iri, basık, alt kısmı geniş, boyunsuz, çiçek  çukuru derindir. Erwinia (ateş yanıklığı)bakteriyel  hastalığına duyarlıdır. Kabuk rengi sarı-yeşil zemin üzerine al yanaklıdır. Meyve eti beyaz, gevrek, sulu ve lezzetlidir. Mükemmel yeme kalitesine sahip olup soğuk hava tesislerinde uzun süre muhafaza edilir. Ekim ayını 2.haftası olgunlaşır. Dölleyicileri; Alça Passe Crassane, P. Precoce Morettini, June Gold ve Williams  dölleyici  çeşitleridir.<br /><br /><hr />
+
+                  <p class="title18" style="margin-bottom:5px;">Santa Maria</p>
+                İtalya‘da Wilians ve Cossia çeşitlerinin melezlenmesi ile elde edilmiş, ağaçları yarı dik ve kuvvetli gelişen, oldukça verimli bir çeşittir. Sofralık tüketime uygun olduğu kadar sanayiye de uygun bir  çeşittir. Albenisi nedeniyle üretimi hızla yaygınlaşmaktadır. Meyve iri (250 gr. civarında), uzun konik şeklinde, çiçek çukuru geniş, sap tarafı dar ve küttür. Meyve kabuğu sarımtırak-yeşil renkte olup güneş gören tarafı kırmızı yanaklıdır. Meyve eti krem renginde çok sulu ve gevrektir. Dölleyicileri; Abate Fetel ve Beurre Hardy çeşitleridir.<br /><br /><hr />
+
+                  <p class="title18" style="margin-bottom:5px;">Williams Bartlet </p>   
+                İngiltere orijinli, ağaçları yarı dik ve kuvvetli gelişen erken  verime yatan, geç çiçeklenen ve düzenli verim alınan bir çeşittir. Ülkemizde olduğu gibi armut yetiştirilen ülkelerde en yaygın yetiştirilen kaliteli çeşitler arasında yer almaktadır.ABD de Bartlet olarak bilinir Meyveleri iri, koni şeklinde, kabuk rengi açık yeşilimsi –sarı, güneş gören kısımlarda kırmızı-pembe yanak yapar. Meyve taze tüketime, hem de sanayiye uygundur. Soğuk hava tesislerinde uzun süre muhafaza edilebilir. BA -29 anacı ile iyi uyuşur. Hasat zamanı; Marmara Bölgesinde Ağustos ayının son haftasıdır. Dölleyicileri; Williams, Dr.J.Guyot, Williams, Passe Crassane, Mustafa Bey’dir.Abate Fetel, Akça, B. Hardy, Passe Crassane’dir.<br /><br /><hr />
+
+                  <p class="title18" style="margin-bottom:5px;">Akça</p>
+                Ağacı kuvvetli ve yarı dik gelişme eğiliminde olan, sık dallı ve dikenli yerli çeşitlerimizdendir. İstanbul Akçası veya Dikenli Akça olarak bilinen tipleri de bulunmakta, Marmara, Ege, Akdeniz ve İç Anadolu Bölgelerinde yetiştiriciliği yaygınlaşmaktadır. Armut kökenli çöğür anaçları üzerinde geç meyveye yattığı için son yıllarda ayva kökenli klon anaçlarına aşılı fidanlar tercih edilmektedir. Meyve orta irilikte, koni şeklinde, meyve kabuğu, yeşil zemin üzerine sarı renktedir. Meyve eti yeşilimsi beyaz, sulu, tatlı, gevrek, hoş kokulu ve az kumludur. Ege’de Haziran ortaları, Marmara’ da hazran sonu ile Temmuz  ayının ilk haftası hasat edilir.<br /><br /><hr />
+
+                  <p class="title18" style="margin-bottom:5px;">Etruska</p>
+                İtalya‘da melezleme ile elde elden ağaç yarı dik gelişen ve geniş taç oluşturan erkenci çeşitlerdendir. Meyveleri Akça armudunu andırmakta, ancak meyveleri Akça’dan biraz daha iridir. Meyve kabuğu zemin rengi sarımtırak yeşildir. Oldukça verimli bir çeşit olup kendisi ile aynı zamanda çiçek açan Morettini, Wiliams çeşitleri dölleyici olarak dikilebilir. Meyve orta irilikte ve sertliktedir. Meyve eti açık krem, sulu ve tatlıdır. BA-29, MC ve OH-F anaçları üzerinde gelişimi ve uyuşması iyidir. Erkenci olması nedeniyle talep görmektedir.5-10 Temmuz tarihlerinde  olgunlaşır.<br /><br />
+
+                </div>
+            <!--end content left-->
+            <div class="side_right"> 
+                  <!--side menu-->
+                <div class="side_menu" style="margin-top:44px; margin-left:30px; margin-bottom:20px;">
+
+                    <img src="./images/thumb/deveci-armut2-150x150.jpg" width="180" height="150"/>
+
+                </div><hr />
+                  <!--end side menu--> 
+                  <!--side box-->
+
+                <div class="side_menu" style="margin-top:12px; margin-left:30px; margin-bottom:20px;">
+
+                    <img src="./images/thumb/deveci-armut2-150x150.jpg" width="180" height="150"/>
+
+                </div><hr />
+
+                <div class="side_menu" style="margin-top:20px; margin-left:30px; margin-bottom:20px;">
+
+                    <img src="./images/thumb/deveci-armut2-150x150.jpg" width="180" height="150"/>
+
+                </div><hr />
+
+                <div class="side_menu" style="margin-top:30px; margin-left:30px; margin-bottom:20px;">
+
+                    <img src="./images/thumb/deveci-armut2-150x150.jpg" width="180" height="150"/>
+
+                </div><hr />
+
+                <div class="side_menu" style="margin-top:30px; margin-left:30px; margin-bottom:20px;">
+
+                    <img src="./images/thumb/deveci-armut2-150x150.jpg" width="180" height="150"/>
+
+                </div>                
+
+
+             </div>
+            <div class="clear"></div>
+          </div>
+            </div>
+        <div class="main_box_bg_right"></div>
+      </div>
+          <!-- end main box background --> 
+        </div>
+    
+    <!--start under animation-->
+    <div class="spacer_animation" id="spacer_animation_frog">
+          <div class="spacer_animation_bg"></div>
+          <div class="spacer_animation_parts">
+        <div class="spacer_animation_part1"></div>
+        <div class="spacer_animation_part2"></div>
+        <div class="spacer_animation_part3"></div>
+        <div class="spacer_animation_part4"></div>
+        <div class="spacer_animation_part5"></div>
+      </div>
+        </div>
+    <!--end under animation--> 
+    
+    <!--end contact box-->
+    <div class="spacer_graphic6"></div>
+    <!--contact box-->
+    <div class="main_box_wrapper" id="contact">
+          <div class="main_box_background"> <!-- start box background -->
+        <div class="main_box_bg_left"></div>
+        <div class="main_box">
+              <div class="content">
+            <h1>İletişim</h1>
+            <div class="half_column_left">
+                  <ul  class="contact_details">
+                <li><span class="icon chome"></span> inegöl,Bursa</li>
+                <li><span class="icon cphone"></span> 1300 555 555 <span class="one_line"> <span class="icon cfax"></span> 61 75555 5555 </span></li>
+                <li><span class="icon cmail"></span> <a href="#">bilgi@ornekfidansitesi.com</a> </li>
+              </ul>
+                  <form action="formsubmit.php" method="post">
+                <fieldset id="contact_form" class="form_wrap">
+                      <label for="contact_name">İsim:
+                    <input name="name" type="text" class="forms" id="contact_name" size="35" />
+                  </label>
+                      <label for="contact_email_address">E-Posta:
+                    <input name="email" type="text" class="forms" id="contact_email_address" size="35" />
+                  </label>
+                      <label for="contact_phone_number">Telefon:
+                    <input name="phone" type="text" class="forms" id="contact_phone_number" size="35" />
+                  </label>
+                      <label for="contact_message">Mesaj:
+                    <textarea name="message" cols="25" rows="5" class="forms textarea" id="contact_message" style="height:122px"></textarea>
+                  </label>
+                      <br class="clear"/>
+                      <input name="submit_message" type="submit" id="submit_button_sml" class="submit_button" value="Gönder" />
+                    </fieldset>
+              </form>
+                </div>
+            <!--end left half-->
+            <div class="half_column_right">
+                  <h3>İletişim Bilgilerimiz:</h3>
+                  <ul id="connect">
+                <li><a href="#"><img src="./images/icon_twitter.gif" alt="Twitter" width="32" height="32" border="0" /></a> </li>
+                <li><a href="#"><img src="./images/icon_youtube.gif" alt="You Tube" width="32" height="32" border="0" /></a> </li>
+                <li><a href="#"><img src="./images/icon_facebook.gif" alt="Facebook" width="32" height="32" border="0" /></a> </li>
+                <li><a href="#"><img src="./images/icon_flickr.gif" alt="Flickr" width="32" height="32" border="0" /></a> </li>
+                <li><a href="#"><img src="./images/icon_linkedin.gif" alt="Linked In" width="32" height="32" border="0" /></a></li>
+                <li><a href="#"><img src="./images/icon_skype.gif" alt="Skype" width="32" height="32" border="0" /></a> </li>
+              </ul>
+                  <div id="googlemap" class="googlemap"></div>
+                  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script> 
+                  <script type="text/javascript">
+			 //<![CDATA[ 
+			  //change the address below to the one you want the marker to point to
+			  var address = "Inegöl, Bursa";
+			  var address_description = "<strong>Inegöl:</strong><br>Inegöl <br/>Suburb Inegöl.";
+			 function enlarge_map(){
+				 window.open('http://maps.google.com.au/maps?q='+escape(address));
+				 return false;
+			 }
+			 var geocoder;
+			 var map;
+			 function loadmap() {
+				geocoder = new google.maps.Geocoder();
+				geocoder.geocode( { 'address': address}, function(results, status) {
+				  if (status == google.maps.GeocoderStatus.OK) {
+					var myOptions = {
+					  zoom: 8,
+					  center: results[0].geometry.location,
+					  mapTypeId: google.maps.MapTypeId.ROADMAP
+					};
+					map = new google.maps.Map(document.getElementById("googlemap"), myOptions);
+					var marker = new google.maps.Marker({
+						map: map, 
+						position: results[0].geometry.location
+					});
+					var infowindow = new google.maps.InfoWindow({
+						content: address_description
+					});
+					//infowindow.open(map,marker); // uncomment this to display a popup on the map location.
+
+					} else {
+					alert("Geocode was not successful for the following reason: " + status);
+				  }
+				});
+
+				
+			  }
+			
+
+			window.onload=loadmap;
+			//]]>
+			</script>
+                  <ul class="map_buttons">
+                <li><!--<a href="./directions.php.html">-->adres tarifi<!--</a>--></li>
+                <li  style="margin-right:7px;"><a href="./directions.php.html" onclick="return enlarge_map()">haritayı büyütün</a></li>
+              </ul>
+                </div>
+            <div class="clear"></div>
+          </div>
+              <!--end right half--> 
+            </div>
+        <div class="main_box_bg_right"></div>
+      </div>
+          <!-- end main box background --> 
+          <!--start under animation-->
+          <div class="spacer_animation" id="spacer_animation_rain">
+        <div class="spacer_animation_bg"></div>
+        <div class="spacer_animation_parts">
+              <div class="spacer_animation_part1"></div>
+              <div class="spacer_animation_part2"></div>
+              <div class="spacer_animation_part3"></div>
+            </div>
+      </div>
+          <!--end under animation--> 
+        </div>
+    <!--end contact box-->
+    
+    <div class="main_box_wrapper" id="armut">
+          <div class="main_box_background"> <!-- start box background -->
+        <div class="main_box_bg_left"></div>
+        <!-- change this to be unique, then you can link to it from the main menu-->
+        <div class="main_box"> 
+              <!-- sets the width, minimum height and top margin -->
+              <div class="content"> 
+            <!-- start the inner slider left/right bit -->
+            <div id="put_your_unique_slider_id_here" class="slider_container">
+                  <div class="slider_header">
+                <h1>Armut</h1>
+                <ul class="slider_buttons">
+                      <li><a href="#" class="portfolio_prev slider_prev">&laquo; Önceki</a></li>
+                      <li><a href="#" class="portfolio_next slider_next">Sonraki &raquo;</a></li>
+                    </ul>
+              </div>
+                  <div class="slider_wrapper">
+                <div class="slider_mover">
+                      <div>
+      
+                        	<div style="float:left; width:650px; text-align:left; margin-right:10px;">
+                            	<p class="title18">Deveci</p>
+                        Kökeni Anadolu olup, ağaçları orta kuvvete yarı yayvan gelişen bir çeşittir. Meyveleri, iri, iyi bakım  koşullarında çok iri, basık, alt kısmı geniş, boyunsuz, çiçek  çukuru derindir. Erwinia (ateş yanıklığı)bakteriyel  hastalığına duyarlıdır. Kabuk rengi sarı-yeşil zemin üzerine al yanaklıdır. Meyve eti beyaz, gevrek, sulu ve lezzetlidir. Mükemmel yeme kalitesine sahip olup soğuk hava tesislerinde uzun süre muhafaza edilir. Ekim ayını 2.haftası olgunlaşır. Dölleyicileri; Alça Passe Crassane, P. Precoce Morettini, June Gold ve Williams  dölleyici  çeşitleridir
+                        	</div>
+                           
+                          <div style="float:left; margin-top:20px; margin-left:35px;">
+                            <img src="images/thumb/deveci-armut2-150x150.jpg" width="200" height="150" />
+                          </div>
+                      
+                          <div style="float:left; width:650px; margin-top:20px;"><hr /></div>     
+                          
+                          <div style="float:left; width:650px; text-align:left; margin-right:10px;">
+                              <p class="title18">Santa Maria</p>
+                        İtalya‘da Wilians ve Cossia çeşitlerinin melezlenmesi ile elde edilmiş, ağaçları yarı dik ve kuvvetli gelişen, oldukça verimli bir çeşittir. Sofralık tüketime uygun olduğu kadar sanayiye de uygun bir  çeşittir. Albenisi nedeniyle üretimi hızla yaygınlaşmaktadır. Meyve iri (250 gr. civarında), uzun konik şeklinde, çiçek çukuru geniş, sap tarafı dar ve küttür. Meyve kabuğu sarımtırak-yeşil renkte olup güneş gören tarafı kırmızı yanaklıdır. Meyve eti krem renginde çok sulu ve gevrektir. Dölleyicileri; Abate Fetel ve Beurre Hardy çeşitleridir
+                          </div>
+                           
+                          <div style="float:left; margin-top:20px; margin-left:35px;">
+                            <img src="images/thumb/Santa-Maria-armut-150x150.jpg" width="200" height="150" />
+                          </div>
+
+                        </div>
+
+
+                      <div id="Williams">      
+                          <div style="float:left; width:650px; text-align:left; margin-right:10px;">
+                              <p class="title18">Williams Bartlet</p>
+                        İngiltere orijinli, ağaçları yarı dik ve kuvvetli gelişen erken  verime yatan, geç çiçeklenen ve düzenli verim alınan bir çeşittir. Ülkemizde olduğu gibi armut yetiştirilen ülkelerde en yaygın yetiştirilen kaliteli çeşitler arasında yer almaktadır.ABD de Bartlet olarak bilinir Meyveleri iri, koni şeklinde, kabuk rengi açık yeşilimsi –sarı, güneş gören kısımlarda kırmızı-pembe yanak yapar. Meyve taze tüketime, hem de sanayiye uygundur. Soğuk hava tesislerinde uzun süre muhafaza edilebilir. BA -29 anacı ile iyi uyuşur. Hasat zamanı; Marmara Bölgesinde Ağustos ayının son haftasıdır. Dölleyicileri; Williams, Dr.J.Guyot, Williams, Passe Crassane, Mustafa Bey’dir.Abate Fetel, Akça, B. Hardy, Passe Crassane’dir.
+                          </div>
+                           
+                          <div style="float:left; margin-top:20px; margin-left:35px;">
+                            <img src="images/thumb/williams-armut-150x143.jpg" width="200" height="150" />
+                          </div>
+                      
+                          <div style="float:left; width:650px; margin-top:20px;"><hr /></div>     
+                          
+                          <div style="float:left; width:650px; text-align:left; margin-right:10px;">
+                              <p class="title18">Akça</p>
+                        Ağacı kuvvetli ve yarı dik gelişme eğiliminde olan, sık dallı ve dikenli yerli çeşitlerimizdendir. İstanbul Akçası veya Dikenli Akça olarak bilinen tipleri de bulunmakta, Marmara, Ege, Akdeniz ve İç Anadolu Bölgelerinde yetiştiriciliği yaygınlaşmaktadır. Armut kökenli çöğür anaçları üzerinde geç meyveye yattığı için son yıllarda ayva kökenli klon anaçlarına aşılı fidanlar tercih edilmektedir. Meyve orta irilikte, koni şeklinde, meyve kabuğu, yeşil zemin üzerine sarı renktedir. Meyve eti yeşilimsi beyaz, sulu, tatlı, gevrek, hoş kokulu ve az kumludur. Ege’de Haziran ortaları, Marmara’ da hazran sonu ile Temmuz  ayının ilk haftası hasat edilir.
+                          </div>
+                           
+                          <div style="float:left; margin-top:20px; margin-left:35px;">
+                        <img src="images/thumb/akca-armut1-150x150.jpg" width="200" height="150" />
+                          </div>
+
+                        </div>
+
+
+                      <div id="Etruska">
+                          <div style="float:left; width:650px; text-align:left; margin-right:10px;">
+                              <p class="title18">Etruska</p>
+                        İtalya‘da melezleme ile elde elden ağaç yarı dik gelişen ve geniş taç oluşturan erkenci çeşitlerdendir. Meyveleri Akça armudunu andırmakta, ancak meyveleri Akça’dan biraz daha iridir. Meyve kabuğu zemin rengi sarımtırak yeşildir. Oldukça verimli bir çeşit olup kendisi ile aynı zamanda çiçek açan Morettini, Wiliams çeşitleri dölleyici olarak dikilebilir. Meyve orta irilikte ve sertliktedir. Meyve eti açık krem, sulu ve tatlıdır. BA-29, MC ve OH-F anaçları üzerinde gelişimi ve uyuşması iyidir. Erkenci olması nedeniyle talep görmektedir.5-10 Temmuz tarihlerinde  olgunlaşır.
+                          </div>
+                           
+                          <div style="float:left; margin-top:20px; margin-left:35px;">
+                            <img src="images/thumb/etruska-armut2-150x150.png" width="200" height="150" />
+                          </div>
+                      
+                        </div>
+
+                  </div><!--slider_mover end -->
+                      
+                      <!-- keep adding more divs here if you want more slides --> 
+                </div>
+              </div>
+                  <!-- end the inner slider left/right bit -->
+                  <div class="clear"></div>
+                  <!-- forces the design to grow down as you add more content --> 
+                </div>
+            <!-- closes content --> 
+          </div>
+            </div>
+        <!-- closes main box -->
+        <div class="main_box_bg_right"></div>
+      </div>
+          <!-- end main box background --> 
+        </div>
+    <script type="text/javascript" language="javascript">
+        new dtbaker_scroller('put_your_unique_slider_id_here');
+        </script>
+        
+          <!-- end main box background --> 
+        </div>
+        
+        
+         
+  </div>
+</div>
+      <!--end wrapper--> 
+<!--bg top--> 
+<!-- star rating javascript --> 
+<script language="javascript" src="./php/widget-rating_cdf7b7c6.php.js" type="text/javascript"></script>
+</body>
+</html>

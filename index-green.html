@@ -1,0 +1,829 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    
+    <title>Jump Eco - by dtbaker</title>
+    <link rel="stylesheet" href="./css/styles.css" type="text/css" />
+    <link rel="stylesheet" href="./css/green.css" type="text/css" />
+    <!--[if IE 9]> <link rel="stylesheet" href="css/styles_ie9.css" type="text/css" /> <![endif]-->
+    <!--[if IE 8]> <link rel="stylesheet" href="css/styles_ie8.css" type="text/css" /> <![endif]-->
+    <!--[if IE 7]> <link rel="stylesheet" href="css/styles_ie7.css" type="text/css" /> <![endif]-->
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="./css/jquery.lightbox-0.5.css" type="text/css" />
+    <link rel="stylesheet" href="./php/widget-rating_f5998e68.php.css" type="text/css" />
+    <!-- star rating css -->
+    <script type="text/javascript" src="./js/jquery-1.4.3.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.lightbox-0.5.pack.js"></script>
+    <script type="text/javascript" src="./js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="./js/dtbaker_slider_links.js"></script>
+    <script type="text/javascript" src="./js/dtbaker_slider.js"></script>
+    <script type="text/javascript" src="./js/dtbaker_animation.js"></script>
+    <script type="text/javascript" src="./js/simplecart/dtbaker_simplecart.js"></script>
+    <script type="text/javascript">
+	<!-- js friendly fallback for animations -->
+	document.write(unescape('%3Cstyle type="text/css"%3E.spacer_animation .spacer_animation_parts div{ margin-top:400px; }%3C/style%3E'));
+	document.write(unescape('%3Cstyle type="text/css"%3E.main_box_background .main_box_bg_left{ margin-left:0px; }%3C/style%3E'));
+	document.write(unescape('%3Cstyle type="text/css"%3E.main_box_background .main_box_bg_right{ margin-left:475px;margin-top:-438px; }%3C/style%3E'));
+    $(function() {
+		$('.spacer_animation').each(function(){
+			var foo = new anim_scroller();
+			foo.init_popup(this);
+			anim_scrollers.push(foo);
+		});
+		// popout leaf code.
+		$('.main_box_background').each(function(){
+			var foo = new anim_scroller();
+			foo.init_popout(this,[
+				{class:'.main_box_bg_left',image:'./images/eco/leaves_left.png',animation_from:{marginLeft:0},animation_to:{marginLeft: -121},time:600},
+				{class:'.main_box_bg_right',image:'./images/eco/leaves_right.png',animation_from:{marginLeft:475, marginTop:-438},animation_to:{marginLeft: 595,marginTop: -331},time:600}
+				]
+			);
+			anim_scrollers.push(foo);
+		});
+		window.onscroll=dtbaker_anim_scroll_go;
+		dtbaker_anim_scroll_go();
+		
+        $('.lightbox').lightBox();
+        $('.dtbaker_gallery a').lightBox();
+        // this starts the "portfolio" sideways scroller.
+        // create a new one of these for each sideways scroller you would like to have.
+        new dtbaker_scroller('portfolio_slider');
+		new dtbaker_simpleCart({
+			'id': 'buy_now', // unique id for this product. don't change this.
+			'paypal': 'dtbaker@gmail.com', // change to false to disable paypal
+			'google': '251134918603076', // change to false to disable google
+			'email': true, // allow the email method
+			'flat_rate': false, // change to false to charge shipping per item
+			'shipping_rate': 0, // shipping rate is controlled by the drop down on order form.
+			'product_name': 'Your product name here',
+			'product_price': 350.00,
+			'currency': USD,
+			'thank_you_url': './thank_you.html'
+		});
+	});
+    </script>
+    <meta charset="UTF-8"></head>
+    <body>
+<div id="fixed_header">
+      <div id="header">
+    <div id="logo"><a href="#home_page" class="slide_link">Single Jump - Simple single product for sale template</a></div>
+    <div id="menu">
+          <ul id="navigation">
+        <li><a href="#home_page" class="slide_link">Home</a></li>
+        <li><a href="#buy_now" class="slide_link">Buy Now</a></li>
+        <li><a href="#features" class="slide_link">Features</a> 
+              <!--notice you do not close the </li> here -->
+              <ul class="second-level">
+            <!--start a new list with the style: class="second-level"-->
+            <li><a href="#screenshot" class="slide_link">Gallery</a></li>
+          </ul>
+            </li>
+        <li><a href="#reviews" class="slide_link">Reviews</a> </li>
+        <li><a href="#support" class="slide_link">Support</a></li>
+        <li><a href="#contact" class="slide_link">Contact</a></li>
+      </ul>
+        </div>
+  </div>
+    </div>
+<!--end header-->
+<div id="home_page"></div>
+<div id="bg_top">
+      <div id="wrapper">
+    <div class="main_box_wrapper" id="home_pag" style="padding-top:0;">
+          <div class="main_box_background"> <!-- start box background -->
+        <div class="main_box_bg_left"></div>
+        
+        <!--home box-->
+        <div class="main_box" id="section1"> 
+              <!-- <div class="home_price_tag"> WAS <del>$400</del>
+        <div class="band"> NOW <span class="size48">$350</span></div>
+      </div>-->
+              <div class="home_box">
+            <div class="text">
+                  <h1>Single Product For Sale</h1>
+                  <h2>One featured product for sale...  Why this one product is amazing and has the whole website to itself.</h2>
+                  <ul class="numbered_list">
+                <li><span>1</span>Very unique sliding single page template.</li>
+                <li><span>2</span>Perfect layout to sell a single product.</li>
+                <li><span>3</span>Shopping cart, google map, lightbox...</li>
+              </ul>
+                  <ul class="buttons_float">
+                <li>
+                      <div class="button_med"><a href="#features" class="slide_link">more info</a></div>
+                    </li>
+                <li>
+                      <div class="button_med"><a href="#buy_now" class="slide_link">buy now</a></div>
+                    </li>
+              </ul>
+                </div>
+            <!--end left-->
+            <div class="home_right">
+                  <div class="star">new</div>
+                  <img src="./images/eco/home_image.png" width="400" height="430" alt="product" /></div>
+            <!--end home right--> 
+          </div>
+            </div>
+        <!--end home box-->
+        <div class="main_box_bg_right"></div>
+      </div>
+          <!-- end main box background --> 
+        </div>
+    
+    <!--start under animation-->
+    <div class="spacer_animation" id="spacer_animation_rocks">
+          <div class="spacer_animation_bg"></div>
+          <div class="spacer_animation_parts">
+        <div class="spacer_animation_part1"></div>
+        <div class="spacer_animation_part2"></div>
+        <div class="spacer_animation_part3"></div>
+      </div>
+        </div>
+    <!--end under animation--> 
+    
+    <!--buy now box-->
+    <div class="main_box_wrapper" id="buy_now">
+          <div class="main_box_background"> <!-- start box background -->
+        <div class="main_box_bg_left"></div>
+        <div class="main_box">
+              <div class="content">
+            <div class="left_460">
+                  <h1>Buy Now</h1>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sagittis nisi varius lorem posuere tristique condimentum eros ornare. Nunc fermentum, urna condimentum imperdiet congue, magna odio cursus mauris, a hendrerit lacus arcu id dolor. In hac habitasse platea dictumst. Nunc massa metus, rhoncus et luctus sit amet, vehicula in lorem. Cras facilisis, ipsum non dictum egestas, dolor lorem fermentum lorem, sed aliquam arcu sem vitae nisl. Etiam est mauris, lobortis sit amet accumsan ut, auctor vitae ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. </p>
+                  <ul class="ticklist">
+                <li>Vestibulum ante ipsum primis</li>
+                <li>In faucibus orci luctus et ultrices posuere cubilia</li>
+                <li>Ida dapibus. Duis volutpat lectus</li>
+              </ul>
+                  <div class="sale_border">
+                <div class="sale">
+                      <div class="left">
+                    <p class="title18">Buy the product online &amp; save! </p>
+                    <p class="title30"> Online sale price: </p>
+                    <p class="title14">*Price includes tax and free shipping </p>
+                  </div>
+                      <div class="balls"><span class="price1">$350</span> <span class="price2">SAVE<br />
+                        <span class="size24">$50</span></span></div>
+                      <div class="clear"></div>
+                    </div>
+              </div>
+                </div>
+            <!--end left-->
+            
+            <div class="right_400"><img src="./images/eco/buy_book.jpg" width="400" height="430" alt="book" /></div>
+            <div class="clear"></div>
+            <div class="two_column_wrapper">
+                  <div class="side_left"> 
+                
+                <!--side box-->
+                <div class="side_box">
+                      <div class="top"></div>
+                      <div class="content_middle">
+                    <p class="title">Testimonial</p>
+                    <span class="testimonial_left"></span>Lorem ipsum dolor sit amet,    
+                    consectetur adipiscing elit. Phasellus sagittis nisi varius lorem posuere tristique condimentum eros ornare. Nunc fermentum, urna condimentum imperdiet. <span class="testimonial_right"></span> <em><strong>Name Name</strong></em><strong></strong>
+                    <div class="clear"></div>
+                  </div>
+                      <div class="bottom"></div>
+                    </div>
+                <!--end side box--> 
+                <!--side box-->
+                <div class="side_box">
+                      <div class="top"></div>
+                      <div class="content_middle">
+                    <p class="title"><img src="./images/money_back.png" alt="Money Back" width="101" height="75" align="left" /></p>
+                    <p class="title">30-DAY MONEY<br />
+                          BACK GUARANTEE</p>
+                    <div class="clear"></div>
+                  </div>
+                      <div class="bottom"></div>
+                    </div>
+                <!--end side box--> 
+                <!--side box-->
+                <div class="side_box">
+                      <div class="top"></div>
+                      <div class="content_middle">
+                    <p class="title">Pay Securely through:</p>
+                    <ul class="payment">
+                          <li><img src="./images/icon_mastercard.png" width="47" height="29" alt="mc" /></li>
+                          <li><img src="./images/icon_visa.png" width="47" height="29" alt="visa" /></li>
+                          <li><img src="./images/icon_paypal.png" width="47" height="29" alt="paypal" /></li>
+                          <li><img src="./images/icon_bank.png" width="47" height="29" alt="bank" /></li>
+                        </ul>
+                    <div class="clear"></div>
+                  </div>
+                      <div class="bottom"></div>
+                    </div>
+                <!--end side box--> 
+              </div>
+                  <div class="content_right">
+                <div class="box_title"> ORDER YOURS HERE </div>
+                <p>Enter your details below to place an order.</p>
+                <form action="php/simplecart_email.php" method="post" class="shop_form">
+                      <fieldset class="form_wrap">
+                    <label for="qty">Quantity:
+                          <input name="qty" type="text" class="forms quantity" id="qty" size="4" value="1" style="text-align:center;" />
+                        </label>
+                    <label for="shipping">Shipping:
+                          <select name="shipping" id="shipping" class="forms shipping_cost">
+                        <option value="9.90">Express $9.90</option>
+                        <option value="5.20">Regular $5.20</option>
+                      </select>
+                        </label>
+                    <label for="first_name">Your Name:
+                          <input name="first_name" type="text" class="forms" id="first_name" size="35" />
+                        </label>
+                    <label for="email">Email:
+                          <input name="email" type="text" class="forms" id="email" size="35" />
+                        </label>
+                    <label for="phone">Phone:
+                          <input name="phone" type="text" class="forms" id="phone" size="35" />
+                        </label>
+                    <label for="street_address">Street Address:
+                          <input name="address1" type="text" class="forms" id="street_address" size="35" />
+                        </label>
+                    <label for="city">City:
+                          <input name="city" type="text" class="forms" id="city" size="35" />
+                        </label>
+                    <label for="state">State:
+                          <input name="state" type="text" class="forms" id="state" size="35" />
+                        </label>
+                    <label for="zip">Zip:
+                          <input name="zip" type="text" class="forms" id="zip" size="10" />
+                        </label>
+                    <label for="country">Country:
+                          <input name="country" type="text" class="forms" id="country" size="10" />
+                        </label>
+                    <label for="message">Message:
+                          <textarea name="message" cols="30" rows="4" class="textarea" id="message"></textarea>
+                        </label>
+                    <div class="cart_summary_outer_wrap">
+                          <div class="cart_summary_wrap">
+                        <label> Total: <span class="cart_summary" style="position: absolute; margin: 0 0 0 15px;">$0</span> </label>
+                      </div>
+                        </div>
+                    <label for="payment_paypal">PayPal: <span style="position: absolute; font-size: 12px; font-weight: normal; margin: 0 0 0 39px;">Pay Securely with your Credit Card, PayPal Balance or Bank Transfer.</span>
+                          <input type="radio" name="payment_method" id="payment_paypal" class="form_radio" value="paypal" checked="checked" />
+                        </label>
+                    <label for="payment_google">Google: <span style="position: absolute; font-size: 12px; font-weight: normal; margin: 0 0 0 39px;">Pay Securely using the online Google Checkout system.</span>
+                          <input type="radio" name="payment_method" id="payment_google" class="form_radio" value="google"/>
+                        </label>
+                    <label for="payment_email">Email: <span style="position: absolute; font-size: 12px; font-weight: normal; margin: 0 0 0 39px;">Email us your order and we will ring you for payment.</span>
+                          <input type="radio" name="payment_method" id="payment_email" class="form_radio" value="email"/>
+                        </label>
+                    <br class="clear"/>
+                    <input name="submit_message" type="button"  class="submit_button submit_order" value="Order" />
+                  </fieldset>
+                    </form>
+              </div>
+                  <div class="clear"></div>
+                </div>
+            <!--end two_column_wrapper--> 
+          </div>
+            </div>
+        <div class="main_box_bg_right"></div>
+        <!-- end main box background --> </div>
+        </div>
+    <!--end buy now box--> 
+    
+    <!--start under animation-->
+    <div class="spacer_animation" id="spacer_animation_wind">
+          <div class="spacer_animation_bg"></div>
+          <div class="spacer_animation_parts">
+        <div class="spacer_animation_part1"></div>
+        <div class="spacer_animation_part2"></div>
+        <div class="spacer_animation_part3"></div>
+        <div class="spacer_animation_part4"></div>
+      </div>
+        </div>
+    <!--end under animation--> 
+    
+    <!--portfolio box-->
+    <div class="main_box_wrapper" id="features">
+          <div class="main_box_background"> <!-- start box background -->
+        <div class="main_box_bg_left"></div>
+        <div class="main_box">
+              <div class="content">
+            <div id="portfolio_slider" class="slider_container">
+                  <div class="slider_header">
+                <h1>Features</h1>
+                <ul class="slider_buttons">
+                      <li><a href="#" class="portfolio_prev slider_prev">&laquo; prev</a></li>
+                      <li><a href="#" class="portfolio_next slider_next">next &raquo;</a></li>
+                    </ul>
+              </div>
+                  <div class="slider_wrapper">
+                <div class="slider_mover"> 
+                      <!-- start -->
+                      <div>
+                    <ul class="threecols">
+                          <li class="margin_right_30">
+                        <div class="feature">
+                              <div class="image"> <a href="./images/feature1.jpg" class="lightbox"><img src="./images/eco/icon_1.jpg" alt="Photo" width="286" height="190" border="0" /></a></div>
+                              <div class="text">
+                            <h3 style="font-weight:bold">Feature 1</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sodales metus id mi suscipit ut ullamcorper lectus congue. Ut a massa volutpat ipsum tempor auctor faucibus eget arcu.</p>
+                            <p><a href="#" target="_blank" class="link_button">more</a></p>
+                          </div>
+                            </div>
+                      </li>
+                          <li class="margin_right_30">
+                        <div class="feature">
+                              <div class="image"> <a href="./images/feature2.jpg" class="lightbox"><img src="./images/eco/icon_2.jpg" alt="photo" width="286" height="190" border="0" /></a></div>
+                              <div class="text">
+                            <h3 style="font-weight:bold">Feature 2</h3>
+                            <ul class="dots">
+                                  <li>Lorem ipsum dolor sit amet</li>
+                                  <li>Consectetur adipiscing elit. </li>
+                                  <li>Fusce sodales metus</li>
+                                  <li>Id mi suscipit ut</li>
+                                  <li>ullamcorper lectus congue.</li>
+                                </ul>
+                            <p><a href="#" target="_blank" class="link_button">more</a></p>
+                          </div>
+                            </div>
+                      </li>
+                          <li>
+                        <div class="feature">
+                              <div class="image"> <a href="./images/feature3.jpg" class="lightbox"><img src="./images/eco/icon_3.jpg" alt="Photo" width="286" height="190" border="0" /></a></div>
+                              <div class="text">
+                            <h3 style="font-weight:bold">Feature 3</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sodales metus id mi suscipit ut ullamcorper lectus congue. Ut a massa volutpat ipsum tempor auctor faucibus eget arcu.</p>
+                            <p><a href="#" target="_blank" class="link_button">more</a></p>
+                          </div>
+                            </div>
+                      </li>
+                        </ul>
+                  </div>
+                      <!-- end --> 
+                      <!-- start 2 -->
+                      <div>
+                    <ul class="threecols">
+                          <li class="margin_right_30">
+                        <div class="feature">
+                              <div class="image"> <a href="./images/feature1.jpg" class="lightbox"><img src="./images/eco/icon_4.jpg" alt="Photo" width="286" height="190" border="0" /></a></div>
+                              <div class="text">
+                            <h3 style="font-weight:bold">Feature 4</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sodales metus id mi suscipit ut ullamcorper lectus congue. Ut a massa volutpat ipsum tempor auctor faucibus eget arcu.</p>
+                            <p><a href="#" target="_blank" class="link_button">more</a></p>
+                          </div>
+                            </div>
+                      </li>
+                          <li class="margin_right_30">
+                        <div class="feature">
+                              <div class="image"> <a href="./images/feature2.jpg" class="lightbox"><img src="./images/eco/icon_5.jpg" alt="photo" width="286" height="190" border="0" /></a></div>
+                              <div class="text">
+                            <h3 style="font-weight:bold">Feature 5</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sodales metus id mi suscipit ut ullamcorper lectus congue. Ut a massa volutpat ipsum tempor auctor faucibus eget arcu.</p>
+                            <p><a href="#" target="_blank" class="link_button">more</a></p>
+                          </div>
+                            </div>
+                      </li>
+                          <li>
+                        <div class="feature">
+                              <div class="image"> <a href="./images/feature3.jpg" class="lightbox"><img src="./images/eco/icon_6.jpg" alt="Photo" width="286" height="190" border="0" /></a></div>
+                              <div class="text">
+                            <h3 style="font-weight:bold">Feature 6</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sodales metus id mi suscipit ut ullamcorper lectus congue. Ut a massa volutpat ipsum tempor auctor faucibus eget arcu.</p>
+                            <p><a href="#" target="_blank" class="link_button">more</a></p>
+                          </div>
+                            </div>
+                      </li>
+                        </ul>
+                  </div>
+                      <!-- end 2--> 
+                    </div>
+              </div>
+                </div>
+          </div>
+            </div>
+        <div class="main_box_bg_right"></div>
+      </div>
+          <!-- end main box background --> 
+          <!--start under animation-->
+          <div class="spacer_animation" id="spacer_animation_city">
+        <div class="spacer_animation_bg"></div>
+        <div class="spacer_animation_parts">
+              <div class="spacer_animation_part1"></div>
+              <div class="spacer_animation_part2"></div>
+              <div class="spacer_animation_part3"></div>
+            </div>
+      </div>
+          <!--end under animation--> 
+        </div>
+    <!--end features box--> 
+    
+    <!--gallery box-->
+    <div class="main_box_wrapper" id="screenshot">
+          <div class="main_box_background"> <!-- start box background -->
+        <div class="main_box_bg_left"></div>
+        <div class="main_box">
+              <div class="content">
+            <h1>Gallery</h1>
+            <div class="dtbaker_gallery">
+                  <dl class="gallery-item">
+                <dt class="gallery-icon"> <a href="./images/screenshot1lg.jpg" title="lg_1"><img src="./images/screenshot1.jpg" class="attachment-thumbnail" alt="lg_1" title="lg_1" width="157" height="157" /></a> </dt>
+              </dl>
+                  <dl class="gallery-item">
+                <dt class="gallery-icon"> <a href="./images/screenshot2lg.jpg" title="lg_1"><img src="./images/screenshot2.jpg" class="attachment-thumbnail" alt="lg_1" title="lg_1" width="157" height="157" /></a> </dt>
+              </dl>
+                  <dl class="gallery-item">
+                <dt class="gallery-icon"> <a href="./images/screenshot3lg.jpg" title="lg_1"><img src="./images/screenshot3.jpg" class="attachment-thumbnail" alt="lg_1" title="lg_1" width="157" height="157" /></a> </dt>
+              </dl>
+                  <dl class="gallery-item">
+                <dt class="gallery-icon"> <a href="./images/screenshot4lg.jpg" title="lg_1"><img src="./images/screenshot4.jpg" class="attachment-thumbnail" alt="lg_1" title="lg_1" width="157" height="157" /></a> </dt>
+              </dl>
+                  <dl class="gallery-item" style="margin-right:0px;">
+                <dt class="gallery-icon"> <a href="./images/screenshot5lg.jpg" title="lg_1"><img src="./images/screenshot5.jpg" class="attachment-thumbnail" alt="lg_1" title="lg_1" width="157" height="157" /></a> </dt>
+              </dl>
+                  <dl class="gallery-item">
+                <dt class="gallery-icon"> <a href="./images/screenshot6lg.jpg" title="lg_1"><img src="./images/screenshot6.jpg" class="attachment-thumbnail" alt="lg_1" title="lg_1" width="157" height="157" /></a> </dt>
+              </dl>
+                  <dl class="gallery-item">
+                <dt class="gallery-icon"> <a href="./images/screenshot7lg.jpg" title="lg_1"><img src="./images/screenshot7.jpg" class="attachment-thumbnail" alt="lg_1" title="lg_1" width="157" height="157" /></a> </dt>
+              </dl>
+                  <dl class="gallery-item">
+                <dt class="gallery-icon"> <a href="./images/screenshot8lg.jpg" title="lg_1"><img src="./images/screenshot8.jpg" class="attachment-thumbnail" alt="lg_1" title="lg_1" width="157" height="157" /></a> </dt>
+              </dl>
+                  <dl class="gallery-item">
+                <dt class="gallery-icon"> <a href="./images/screenshot9lg.jpg" title="lg_1"><img src="./images/screenshot9.jpg" class="attachment-thumbnail" alt="lg_1" title="lg_1" width="157" height="157" /></a> </dt>
+              </dl>
+                  <dl class="gallery-item" style="margin-right:0px;">
+                <dt class="gallery-icon"> <a href="./images/screenshot10lg.jpg" title="lg_1"><img src="./images/screenshot10.jpg" class="attachment-thumbnail" alt="lg_1" title="lg_1" width="157" height="157" /></a></dt>
+              </dl>
+                  <div class="clear"></div>
+                </div>
+          </div>
+            </div>
+        <div class="main_box_bg_right"></div>
+      </div>
+          <!-- end main box background --> 
+        </div>
+    
+    <!--start under animation-->
+    <div class="spacer_animation" id="spacer_animation_rainbow">
+          <div class="spacer_animation_bg"></div>
+          <div class="spacer_animation_parts">
+        <div class="spacer_animation_part1"></div>
+        <div class="spacer_animation_part2"></div>
+        <div class="spacer_animation_part3"></div>
+        <div class="spacer_animation_part4"></div>
+        <div class="spacer_animation_part5"></div>
+      </div>
+        </div>
+    <!--end under animation--> 
+    
+    <!--end screenshot box-->
+    <div class="spacer_graphic4"></div>
+    <!--Review box-->
+    <div class="main_box_wrapper" id="reviews">
+          <div class="main_box_background"> <!-- start box background -->
+        <div class="main_box_bg_left"></div>
+        <div class="main_box">
+              <div class="content">
+            <div class="content_left">
+                  <h1>Reviews</h1>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus neque sapien, consectetur eu molestie et, pellentesque at metus. Nam quis dui justo, ac placerat nunc. Etiam sit amet turpis vitae dui iaculis eleifend. </p>
+                 <div class="review_wrapper">
+                  <!--review one--> 
+                  <div class="review_title">Lorem ipsum dolor sit amet</div>
+                <div class="review_date">28 March 2011</div>
+                <div class="reviewer_wrapper">
+ <div class="review_left"> Reviewed by <a href="#">username</a> </div>
+                  <!-- start star rating -->
+                  <div id="star_rating_1" class="widget-rating" style="float:left;"> <span class="widget-rating-data">r=1|r0=s,php/images/rating-star.gif,5</span> <span class="widget-rating-data">|</span> </div>
+                  <!-- end star rating -->
+                  </div>
+                  <div class="review_text"><p>Consectetur adipiscing elit. Vivamus neque sapien, consectetur eu molestie et, pellentesque at metus. Nam quis dui justo, ac placerat nunc. Etiam sit amet turpis vitae dui iaculis eleifend. Cras eu faucibus sapien. Phasellus nec nunc a lacus mollis viverra. Curabitur purus orci, tincidunt nec porttitor et, venenatis imperdiet lacus. Etiam sit amet felis in magna facilisis posuere eu et magna.</p></div>
+                <a href="#" class="link_button">Read the full review</a>
+                  
+                  
+                  <!--end review one--><hr />
+                 <!--review one--> 
+                  <div class="review_title">Lorem ipsum dolor sit amet</div>
+                <div class="review_date">28 March 2011</div>
+                <div class="reviewer_wrapper">
+ <div class="review_left"> Reviewed by <a href="#">username</a> </div>
+                  <!-- start star rating -->
+                  <div id="star_rating_2" class="widget-rating" style="float:left;"> <span class="widget-rating-data">r=1|r0=s,php/images/rating-star.gif,5</span> <span class="widget-rating-data">|</span> </div>
+                  <!-- end star rating -->
+                  </div>
+                  <div class="review_text"><p>Consectetur adipiscing elit. Vivamus neque sapien, consectetur eu molestie et, pellentesque at metus. Nam quis dui justo, ac placerat nunc. Etiam sit amet turpis vitae dui iaculis eleifend. Cras eu faucibus sapien. Phasellus nec nunc a lacus mollis viverra. Curabitur purus orci, tincidunt nec porttitor et, venenatis imperdiet lacus. Etiam sit amet felis in magna facilisis posuere eu et magna.</p></div>
+                <a href="#" class="link_button">Read the full review</a>
+                  
+                  
+                  <!--end review one--><hr /></div>
+                 <div class="button_med"><a href="#" class="slide_link">More &raquo;</a></div>
+                 
+                 </div>
+            <!--end content left-->
+            <div class="side_right"> 
+                  <!--side menu-->
+                  <div class="side_menu">
+                <h3>Past Reviews</h3>
+                <ul>
+                      <li><a href="#"> Vestibulum aliquet</a></li>
+                      <li><a href="#"> Enim sit amet bibendum</a></li>
+                      <li><a href="#"> Venenatis </a></li>
+                      <li><a href="#">Dolor risus ornare orci</a></li>
+                      <li><a href="#"> Ac mollis</a></li>
+                    </ul>
+              </div>
+                  <!--end side menu--> 
+                  
+                  <!--side box-->
+                  <div class="side_box_thin"> 
+                <!--search-->
+                <div class="search_box_container">
+                      <form action="search.php" method="get" name="search">
+                    <input name="search" type="text" class="field" id="search_box" />
+                    <input name="Search" type="submit" class="sbutton" value="search" />
+                  </form>
+                    </div>
+                <!--end search--> 
+              </div>
+                  <!--end side box thin--> 
+                  <!--side menu-->
+                  <div class="side_menu" style="margin-top:30px;">
+                <h3>Our Products</h3>
+                <ul>
+                      <li><a href="#"> Vestibulum aliquet</a></li>
+                      <li><a href="#"> Enim sit amet bibendum</a></li>
+                      <li><a href="#"> Venenatis </a></li>
+                      <li><a href="#">Dolor risus ornare orci</a></li>
+                      <li><a href="#"> Ac mollis</a></li>
+                    </ul>
+              </div>
+                  <!--end side menu--> 
+                </div>
+            <div class="clear"></div>
+          </div>
+            </div>
+        <div class="main_box_bg_right"></div>
+      </div>
+          <!-- end main box background --> 
+        </div>
+    <!--end review box--> 
+    
+    <!--start under animation-->
+    <div class="spacer_animation" id="spacer_animation_bird">
+          <div class="spacer_animation_bg"></div>
+          <div class="spacer_animation_parts">
+        <div class="spacer_animation_part1"></div>
+        <div class="spacer_animation_part2"></div>
+        <div class="spacer_animation_part3"></div>
+        <div class="spacer_animation_part4"></div>
+        <div class="spacer_animation_part5"></div>
+      </div>
+        </div>
+    <!--end under animation--> 
+    
+    <!--contact box-->
+    <div class="main_box_wrapper" id="support">
+          <div class="main_box_background"> <!-- start box background -->
+        <div class="main_box_bg_left"></div>
+        <div class="main_box">
+              <div class="content">
+            <div class="content_left">
+                  <h1>Support</h1>
+                  <p class="title18">Frequently Asked Questions</p>
+                  <ul class="dots">
+                <li><a href="#">Lorem ipsum dolor sit amet? </a></li>
+                <li><a href="#">Consectetur adipiscing elit. Vivamus neque sapien, consectetur eu molestie et?</a></li>
+                <li><a href="#">Pellentesque at metus. Nam quis dui justo, ac placerat nunc?</a></li>
+                <li><a href="#">Etiam sit amet turpis vitae dui iaculis eleifend?</a></li>
+              </ul>
+                  <p><strong class="title14">Lorem ipsum dolor sit amet?</strong><br />
+                consectetur adipiscing elit. Vivamus neque sapien, consectetur eu molestie et, pellentesque at metus. Nam quis dui justo, ac placerat nunc. Etiam sit amet turpis vitae dui iaculis eleifend. Cras eu faucibus sapien. Phasellus nec nunc a lacus mollis viverra. Curabitur purus orci, tincidunt nec porttitor et, venenatis imperdiet lacus. Etiam sit amet felis in magna facilisis posuere eu et magna.</p>
+                  <p><strong class="title14">Cras eu faucibus sapien?</strong><br />
+                Phasellus nec nunc a lacus mollis viverra. Curabitur purus orci, tincidunt nec porttitor et, venenatis imperdiet lacus. Etiam sit amet felis in magna facilisis posuere eu et magna.</p>
+                  <p><strong class="title14">Curabitur purus orci?</strong><br />
+                Tincidunt nec porttitor et, venenatis imperdiet lacus. Etiam sit amet felis in magna facilisis posuere eu et magna.</p>
+                  <p><strong class="title14">Etiam sit amet turpis vitae dui iaculis eleifend?</strong><br />
+                Tincidunt nec porttitor et, venenatis imperdiet lacus. Etiam sit amet felis in magna facilisis posuere eu et magna.</p>
+                </div>
+            <!--end content left-->
+            <div class="side_right"> 
+                  <!--side menu-->
+                  <div class="side_menu">
+                <h3>Downloads/Manuals</h3>
+                <ul>
+                      <li><a href="#"> Vestibulum aliquet</a></li>
+                      <li><a href="#"> Enim sit amet bibendum</a></li>
+                      <li><a href="#"> Venenatis </a></li>
+                      <li><a href="#">Dolor risus ornare orci</a></li>
+                      <li><a href="#"> Ac mollis</a></li>
+                    </ul>
+              </div>
+                  <!--end side menu--> 
+                  <!--side box-->
+                  <div class="side_box_thin"> 
+                <!--search-->
+                <div class="search_box_container">
+                      <form action="search.php" method="get" name="search">
+                    <input name="search" type="text" class="field" id="search_box2" />
+                    <input name="Search" type="submit" class="sbutton" value="search" />
+                  </form>
+                    </div>
+                <!--end search--> 
+              </div>
+                  <!--end side box thin--> 
+                  <!--form-->
+                  <div class="side_form">
+                <h3 class="blue">Send us a question:</h3>
+                <form action="formsubmit.php" method="post">
+                      <fieldset id="small_form">
+                    <label for="support_name">Name:</label>
+                    <input name="name" type="text" class="forms_small" id="support_name" size="26" />
+                    <label for="support_email">Email:</label>
+                    <input name="email" type="text" class="forms_small" id="support_email" size="26" />
+                    <label for="support_message">Message:</label>
+                    <textarea name="message" cols="18" rows="4" class="forms_small textarea" id="support_message"></textarea>
+                    <br class="clear"/>
+                    <input name="submit" type="submit" id="submit" class="submit_button" value="submit" />
+                  </fieldset>
+                    </form>
+              </div>
+                  <!--end form--> 
+                </div>
+            <div class="clear"></div>
+          </div>
+            </div>
+        <div class="main_box_bg_right"></div>
+      </div>
+          <!-- end main box background --> 
+        </div>
+    
+    <!--start under animation-->
+    <div class="spacer_animation" id="spacer_animation_frog">
+          <div class="spacer_animation_bg"></div>
+          <div class="spacer_animation_parts">
+        <div class="spacer_animation_part1"></div>
+        <div class="spacer_animation_part2"></div>
+        <div class="spacer_animation_part3"></div>
+        <div class="spacer_animation_part4"></div>
+        <div class="spacer_animation_part5"></div>
+      </div>
+        </div>
+    <!--end under animation--> 
+    
+    <!--end contact box-->
+    <div class="spacer_graphic6"></div>
+    <!--contact box-->
+    <div class="main_box_wrapper" id="contact">
+          <div class="main_box_background"> <!-- start box background -->
+        <div class="main_box_bg_left"></div>
+        <div class="main_box">
+              <div class="content">
+            <h1>Contact</h1>
+            <div class="half_column_left">
+                  <ul  class="contact_details">
+                <li><span class="icon chome"></span> Shop 5, 55 Retail Way, Suburb, City, Country 4444</li>
+                <li><span class="icon cphone"></span> 1300 555 555 <span class="one_line"> <span class="icon cfax"></span> 61 75555 5555 </span></li>
+                <li><span class="icon cmail"></span> <a href="#">info@website.com</a> </li>
+              </ul>
+                  <form action="formsubmit.php" method="post">
+                <fieldset id="contact_form" class="form_wrap">
+                      <label for="contact_name">Name:
+                    <input name="name" type="text" class="forms" id="contact_name" size="35" />
+                  </label>
+                      <label for="contact_email_address">Email:
+                    <input name="email" type="text" class="forms" id="contact_email_address" size="35" />
+                  </label>
+                      <label for="contact_phone_number">Phone:
+                    <input name="phone" type="text" class="forms" id="contact_phone_number" size="35" />
+                  </label>
+                      <label for="contact_message">Message:
+                    <textarea name="message" cols="25" rows="5" class="forms textarea" id="contact_message" style="height:122px"></textarea>
+                  </label>
+                      <br class="clear"/>
+                      <input name="submit_message" type="submit" id="submit_button_sml" class="submit_button" value="submit" />
+                    </fieldset>
+              </form>
+                </div>
+            <!--end left half-->
+            <div class="half_column_right">
+                  <h3>Connect with us:</h3>
+                  <ul id="connect">
+                <li><a href="#"><img src="./images/icon_twitter.gif" alt="Twitter" width="32" height="32" border="0" /></a> </li>
+                <li><a href="#"><img src="./images/icon_youtube.gif" alt="You Tube" width="32" height="32" border="0" /></a> </li>
+                <li><a href="#"><img src="./images/icon_facebook.gif" alt="Facebook" width="32" height="32" border="0" /></a> </li>
+                <li><a href="#"><img src="./images/icon_flickr.gif" alt="Flickr" width="32" height="32" border="0" /></a> </li>
+                <li><a href="#"><img src="./images/icon_linkedin.gif" alt="Linked In" width="32" height="32" border="0" /></a></li>
+                <li><a href="#"><img src="./images/icon_skype.gif" alt="Skype" width="32" height="32" border="0" /></a> </li>
+              </ul>
+                  <div id="googlemap" class="googlemap"></div>
+                  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script> 
+                  <script type="text/javascript">
+			 //<![CDATA[ 
+			  //change the address below to the one you want the marker to point to
+			  var address = "Gold Coast, QLD, Australia";
+			  var address_description = "<strong>Company:</strong><br>Shop 5, 55 Retail Way, <br/>Suburb 4444.";
+			 function enlarge_map(){
+				 window.open('http://maps.google.com.au/maps?q='+escape(address));
+				 return false;
+			 }
+			 var geocoder;
+			 var map;
+			 function loadmap() {
+				geocoder = new google.maps.Geocoder();
+				geocoder.geocode( { 'address': address}, function(results, status) {
+				  if (status == google.maps.GeocoderStatus.OK) {
+					var myOptions = {
+					  zoom: 8,
+					  center: results[0].geometry.location,
+					  mapTypeId: google.maps.MapTypeId.ROADMAP
+					};
+					map = new google.maps.Map(document.getElementById("googlemap"), myOptions);
+					var marker = new google.maps.Marker({
+						map: map, 
+						position: results[0].geometry.location
+					});
+					var infowindow = new google.maps.InfoWindow({
+						content: address_description
+					});
+					//infowindow.open(map,marker); // uncomment this to display a popup on the map location.
+
+					} else {
+					alert("Geocode was not successful for the following reason: " + status);
+				  }
+				});
+
+				
+			  }
+			
+
+			window.onload=loadmap;
+			//]]>
+			</script>
+                  <ul class="map_buttons">
+                <li><a href="./directions.php.html">get directions</a></li>
+                <li  style="margin-right:7px;"><a href="./directions.php.html" onclick="return enlarge_map()">enlarge map</a></li>
+              </ul>
+                </div>
+            <div class="clear"></div>
+          </div>
+              <!--end right half--> 
+            </div>
+        <div class="main_box_bg_right"></div>
+      </div>
+          <!-- end main box background --> 
+          <!--start under animation-->
+          <div class="spacer_animation" id="spacer_animation_rain">
+        <div class="spacer_animation_bg"></div>
+        <div class="spacer_animation_parts">
+              <div class="spacer_animation_part1"></div>
+              <div class="spacer_animation_part2"></div>
+              <div class="spacer_animation_part3"></div>
+            </div>
+      </div>
+          <!--end under animation--> 
+        </div>
+    <!--end contact box-->
+    
+    <div class="main_box_wrapper" id="your_page_id">
+          <div class="main_box_background"> <!-- start box background -->
+        <div class="main_box_bg_left"></div>
+        <!-- change this to be unique, then you can link to it from the main menu-->
+        <div class="main_box"> 
+              <!-- sets the width, minimum height and top margin -->
+              <div class="content"> 
+            <!-- start the inner slider left/right bit -->
+            <div id="put_your_unique_slider_id_here" class="slider_container">
+                  <div class="slider_header">
+                <h1>Blank Side Slider</h1>
+                <ul class="slider_buttons">
+                      <li><a href="#" class="portfolio_prev slider_prev">&laquo; prev</a></li>
+                      <li><a href="#" class="portfolio_next slider_next">next &raquo;</a></li>
+                    </ul>
+              </div>
+                  <div class="slider_wrapper">
+                <div class="slider_mover">
+                      <div> the first slide. (put any content here) </div>
+                      <div> the second slide. </div>
+                      <div> the third slide. </div>
+                      <!-- keep adding more divs here if you want more slides --> 
+                    </div>
+              </div>
+                  <!-- end the inner slider left/right bit -->
+                  <div class="clear"></div>
+                  <!-- forces the design to grow down as you add more content --> 
+                </div>
+            <!-- closes content --> 
+          </div>
+            </div>
+        <!-- closes main box -->
+        <div class="main_box_bg_right"></div>
+      </div>
+          <!-- end main box background --> 
+        </div>
+    <script type="text/javascript" language="javascript">
+        new dtbaker_scroller('put_your_unique_slider_id_here');
+        </script> 
+  </div>
+      <!--end wrapper--> 
+    </div>
+<!--bg top--> 
+<!-- star rating javascript --> 
+<script language="javascript" src="./php/widget-rating_cdf7b7c6.php.js" type="text/javascript"></script>
+</body>
+</html>

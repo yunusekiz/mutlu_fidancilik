@@ -44,7 +44,7 @@ if(($name==='') || ($email==='') || ($phone==='') || $message===''){
  
 	
 	}
-	else{
+	else{// geçerli bir email adresi girilmiş ise
 
 			if (filter_var($email,FILTER_VALIDATE_EMAIL)) {
 
@@ -59,7 +59,7 @@ if(($name==='') || ($email==='') || ($phone==='') || $message===''){
 					echo "<noscript> <meta http-equiv=\"refresh\" content=\"0; URL=../index.html#iletisim\"></noscript>";	
 		  	
 		  	}
-		  	else{
+		  	else{// geçersiz bir email adresi girilmiş ise
 
 				echo  " <script type=\"text/javascript\">
             					alert('Lütfen geçerli bir email adresi girin!');

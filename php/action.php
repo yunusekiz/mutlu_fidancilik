@@ -8,11 +8,13 @@
 <body>
 
 <?php
+require_once('mailer.php');
+
 
 function kodTemizle(&$veri)
 {
-	$veri = mysql_real_escape_string($veri);
-	$veri = filter_var($veri,FILTER_SANITIZE_STRING);
+	//$veri = mysql_real_escape_string($veri);
+	$veri = filter_var($veri,FILTER_SANITIZE_STRING,FILTER_FLAG_STRIP_LOW);
 
     return $veri;
 }
@@ -21,14 +23,16 @@ function kodTemizle(&$veri)
 if(isset($_POST['name'])){
 
 /* tüm postları temizler */
-$_POST = array_map("kodTemizle",$_POST);
+//$_POST = array_map("kodTemizle",$_POST);
 
 $name		= $_POST['name'];
 $email		= $_POST['email'];
 $phone		= $_POST['phone'];
 $message	= $_POST['message'];
 
-if(($name==='') || ($email==='') || ($phone==='') || $message===''){
+
+
+if( ($name==='' ) || ($email==='') || ($phone==='') || ($message==='') ){
 	
 	echo  " <script type=\"text/javascript\">
             		alert('Lütfen boş alan bırakmayın');
@@ -45,12 +49,23 @@ if(($name==='') || ($email==='') || ($phone==='') || $message===''){
 	
 	}
 	else{// geçerli bir email adresi girilmiş ise
+			
+			$alici = 'cagri.yeni@gmail.com';
+			$konu 		= $email.' adresinden Yeni Bir Mesaj';
+			$message	.= '. Mesajı gönderen kişinin adı : '.$name."\r\n";
+			$message	.= '. Mesajı gönderen kişinin telefon numarası : '.$phone;
 
 			if (filter_var($email,FILTER_VALIDATE_EMAIL)) {
+				
+				// gelen postları email olarak gönder
+					
+					$mailer = new mailer($alici,$konu,$message,$email,$name);
+					$mailer->sendMail();
 
 					echo "<script type=\"text/javascript\">
             					alert('Teşekkür ederiz! Mesajınız iletildi... ');
         				</script>";
+					
 	
 					echo "<script language=\"Javascript\">
 								window.location = \"../index.html#iletisim\"	
